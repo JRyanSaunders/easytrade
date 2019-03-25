@@ -1,0 +1,17 @@
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		// landscape tablet and bigger
+		@media (min-width: 800px) { @content; }
+	}
+	@else if $point == tablet {
+		//mobile medium and bigger - used to allow small screen styling
+		@media (min-width: 500px) { @content; }
+	}
+	@else if $point == mobile-md {
+		//mobile medium and bigger - used to allow small screen styling
+		@media (min-width: 375px) { @content; }
+	}
+	@else {
+		@warn "`#{$point}` is not a valid breakpoint.";
+	}
+}
