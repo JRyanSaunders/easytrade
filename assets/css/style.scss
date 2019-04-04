@@ -7,3 +7,20 @@ Version: 1.0
 @import 'base/variable';
 @import 'base/elements';
 @import 'base/header';
+@import 'base/footer';
+@import 'base/layout';
+
+@import 'templates/home';
+@import 'templates/about';
+
+@import 'blocks/page-header';
+@import 'blocks/parallax';
+@import 'blocks/polaroid';
+
+
+
+/*@import 'templates/visit';
+@import 'templates/development';
+@import 'templates/tradesman';*/
+
+

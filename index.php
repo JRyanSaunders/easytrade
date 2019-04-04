@@ -1,14 +1,8 @@
 <?php
-include 'header.php'; ?>
+include 'template-blocks/header.php'; ?>
 
-
-
-Welcome to PHP programming language.
-
-
-
-
+<h1>404 INDEX PAGE</h1>
 
 <?php 
-include 'footer.php';
+include 'template-blocks/footer.php';
 ?>

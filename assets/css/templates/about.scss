@@ -1,0 +1,22 @@
+.about {
+    .parallax {
+        background-image: url('/easytrade/assets/img/paint6copy.jpg');   
+        height: 0%;
+    }
+}
+
+
+
+.wbackground {
+    background-color: $secondarycolor;
+    font-size: 36px;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.bbackground {
+    background-color: $bbackgroundcolor;
+    font-size: 36px;
+    padding: 10px;
+    justify-content: space-around;
+}

@@ -1,0 +1,38 @@
+.home {
+    .parallax {
+        background-image: url('/easytrade/assets/img/paint1.jpg');
+        height: 85%;
+    }
+    h1, h2 {
+        position: absolute;
+        left: 50%; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    h1  {
+        top: 32%;  /* position the top  edge of the element at the middle of the parent */
+        font-size: 30px;
+    }
+    h2  {
+        top: 37%;  /* position the top  edge of the element at the middle of the parent */
+        font-size: 20px;
+        width: 100%;
+    }
+    .homesearch {    
+        padding: 6px;
+        position: absolute;
+        top: 50%;  /* position the top  edge of the element at the middle of the parent */
+        left: 50%; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-width: 0px;
+        width: 50%;
+        height: 8%;
+        font-size: 24px;
+        font-family: $Defaultfont;
+    }
+}

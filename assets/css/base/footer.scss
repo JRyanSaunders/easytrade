@@ -1,0 +1,21 @@
+footer {
+    background: #3F729B;
+    padding: 30px;
+    .row {
+        padding: 10px 0px;
+        h3 {
+            text-transform: uppercase;
+            text-align: left;
+            color: #fff;
+        }
+        p {
+                text-align: left;
+        }
+        &.dark-blue {
+            background-color: #1c2331;
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+}

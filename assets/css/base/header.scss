@@ -1,0 +1,45 @@
+.navbar-inverse {
+    background-color: $primarycolor;
+    border: none;
+    .navbar-form {
+        .input-group-btn {
+            button {
+                padding: 9px 12px;
+            }
+        }
+    }
+    .navbar-nav {
+        li {
+            a {
+                background-color: $primarycolor;
+                color: $secondarycolor;
+                &:hover {
+                    background-color: $thirdcolor;
+                    color: black;
+                }
+                &.signin {
+                    border: 2px solid #fff;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    margin-top: 7px;
+                }
+            }
+            &.active {
+                a {
+                    background-color: $primarycolor;
+                    color: $secondarycolor;
+                }
+                &:hover 
+                {
+                    background-color: $thirdcolor;
+                    color: black;
+                }
+            }
+        }
+        .profile {
+            height: 40px;
+            padding: 3%;
+            color: $secondarycolor;
+        }
+    }
+}
