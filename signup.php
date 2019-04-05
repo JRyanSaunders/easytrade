@@ -5,6 +5,10 @@ $page_title = 'Signup';
 $page_header_image = 'paint6.jpg';
 include 'template-blocks/page-header.php'; 
 
+$latest_birth_date = '';
+$current_date = date('Y/m/d');
+$newdate = strtotime ('-16 year', strtotime ($current_date)) ;
+$latest_birth_date = date( 'Y-m-d' , $newdate );
 
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
@@ -15,15 +19,29 @@ $email = $_POST['email_address'];
 $birthday = $_POST['bdaymonth'];
 $type = $_POST['type'];
 
+if (empty($first_name)) {
+    echo "firstname is empty";
+}
 
-echo $first_name;
-echo $last_name;
-echo $username;
-echo $password1;
-echo $password2;
-echo $email;
-echo $birthday;
-echo $type;
+if (empty($last_name)) {
+    echo "lastname is empty";
+}
+
+if (empty($username)) {
+    echo "username is empty";
+}
+
+if ($password1 !== $password2) {
+    echo "passwords do not match";
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "Invalid email format"; 
+  }
+
+if (empty($type)) {
+    echo "type of user is empty";
+}
 
 ?>
 
@@ -66,7 +84,7 @@ echo $type;
 
     <fieldset>
         <label for="birthday">Birthday (month and year):</label>
-            <input type="date" id="birthday" name="bdaymonth" max="2003-12-31">
+            <input type="date" id="birthday" name="bdaymonth" max="<?php echo $latest_birth_date ?>">
     </fieldset>
 
     <fieldset>

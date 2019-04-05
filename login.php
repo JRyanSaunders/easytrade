@@ -6,11 +6,17 @@ $page_header_image = 'paint6.jpg';
 include 'template-blocks/page-header.php'; 
 
 $username = $_POST['user_name'];
-$password1 = $_POST['password'];
+$password = $_POST['password'];
+$conf_password = $_POST['conf_password'];
 
 echo $username;
-echo $password1;
-
+if ($password === $conf_password) {
+    echo "passwords match";
+    // Login
+}
+else {
+    echo "passwords don't match";
+}
 ?>
 
 <form method="post">
@@ -26,7 +32,12 @@ echo $password1;
 
     <fieldset>
         <label for="password">Password:</label>
-            <input type="text" id="password1" name="password">
+            <input type="password" id="password" name="password">
+    </fieldset>
+
+    <fieldset>
+        <label for="conf_password">Confirm Password:</label>
+            <input type="password" id="conf_password" name="conf_password">
     </fieldset>
 
     <fieldset>

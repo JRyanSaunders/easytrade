@@ -14,7 +14,7 @@ include 'template-blocks/header.php'; ?>
         <div class="col-sm-6 polaroid-box">
             <img src="/easytrade/assets/img/advice1.jpg" class="img-responsive" alt=""/>
             <div class="content">
-                <h3>Prepare for a visit</h3>
+                <h3>I need a tradesman or service.</h3>
                 <p>lorem ipsum </p>
                 <button class="btn btn-primary">More information</button>
             </div>
@@ -24,7 +24,7 @@ include 'template-blocks/header.php'; ?>
         <div class="col-sm-6 polaroid-box">
             <img src="/easytrade/assets/img/advice1.jpg" class="img-responsive" alt=""/>
             <div class="content">
-                <h3>Prepare for a visit</h3>
+                <h3>I am a tradesman.</h3>
                 <p>lorem ipsum </p>
                 <button class="btn btn-primary">More information</button>
             </div>

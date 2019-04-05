@@ -5,6 +5,13 @@ $page_title = 'About';
 $page_header_image = 'paint6.jpg';
 include 'template-blocks/page-header-overlay.php'; ?>
 
+<div class="textsection">
+<p>about the website</p>
+<h1>How it works</h1>
+<p>It's difficult finding a tradesman you can trust.
+This website helps you find the right tradesman for you</p>
+<button class="btn btn-primary">Find  a tradesman</button>
+</div>
 
 <div class="wbackground">
     <h3>Your next project starts here...</h3>
