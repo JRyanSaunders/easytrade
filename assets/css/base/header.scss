@@ -1,5 +1,5 @@
 .navbar-inverse {
-    background-color: $primarycolor;
+    background-color: $primary-colour-dark;
     border: none;
     .navbar-form {
         .input-group-btn {
@@ -11,10 +11,9 @@
     .navbar-nav {
         li {
             a {
-                background-color: $primarycolor;
-                color: $secondarycolor;
+                color: $white;
                 &:hover {
-                    background-color: $thirdcolor;
+                    background-color: $grey;
                     color: black;
                 }
                 &.signin {
@@ -23,15 +22,18 @@
                     padding-bottom: 6px;
                     margin-top: 7px;
                 }
+                h3 {
+                    font-size: 17px;
+                }
             }
             &.active {
                 a {
-                    background-color: $primarycolor;
-                    color: $secondarycolor;
+                    background-color: $primary-colour-dark;
+                    color: $white;
                 }
                 &:hover 
                 {
-                    background-color: $thirdcolor;
+                    background-color: $grey;
                     color: black;
                 }
             }
@@ -39,7 +41,7 @@
         .profile {
             height: 40px;
             padding: 3%;
-            color: $secondarycolor;
+            color: $white;
         }
     }
 }

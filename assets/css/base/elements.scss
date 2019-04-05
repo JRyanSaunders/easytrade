@@ -1,58 +1,44 @@
 h1, h2, h3 {
-    font-family: $Defaultfont;
+    font-family: $default-font;
     font-style: normal;
-}
-h1, h2 {
-    font-weight: 500;
-    text-align: center;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 30px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0;
 }
 h1  {
-    font-weight: 300;
-    color: #FFFFFF;
-    font-size: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 45px;
 }
 h2  {
-    
+    font-size: 36px;
 }
 h3 {
-    font-weight: normal;
-    font-size: 30px;
-    line-height: normal;
-    text-align: center;
-    color: #2F4C57; 
+    font-size: 21px;
 }
 h4 {
-    font-weight: normal;
-    font-size: 19px;
-    line-height: normal;
-    text-align: center;
-    color: #2F4C57; 
+    
 }
 h5 {
-    font-weight: normal;
-    font-size: 40px;
-    line-height: normal;
-    text-align: center;
-    color: #ffffff; 
+
 }
 h6 {
 
 }
 p {
-    font-family: Raleway;
+    font-family: $default-font;
     font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 16px;
     line-height: normal;
-    text-align: center;
-    color: #2F4C57;
+    text-align: left;
+    
+    color: #000000;    
+}
+.large-text {
+    @extend p;
+    font-size: 20px;
 }
 button {
 

@@ -1,6 +1,12 @@
 <?php
 $template_name = 'signup';
 include 'admin-header.php';
+
+
+
+include 'icon_block.php';
+
+
 ?>
 
 

@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
-
+<?php include 'functions.php'; ?>
 <header>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -42,14 +42,14 @@
               </div>
             </form>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Find</a></li>
-              <li><a href="#">More</a></li>
+              <li class="active"><a href="#"><h3>Home</h3></a></li>
+              <li><a href="#"><h3>About</h3></a></li>
+              <li><a href="#"><h3>Find</h3></a></li>
+              <li><a href="#"><h3>More</h3></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" class="signin">Sign in</a></li>
-              <li><a href="#">Register</a></li> 
+              <li><a href="#" class="signin"><h3>Log in</h3></a></li>
+              <li><a href="#"><h3>Register</h3></a></li> 
                 <img class="img-responsive profile" src="/easytrade/assets/img/user.svg" alt="User">
             </ul>
         </div>

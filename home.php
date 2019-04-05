@@ -1,6 +1,8 @@
 <?php
 $template_name = 'home';
-include 'template-blocks/header.php'; ?>
+include 'header.php'; 
+?>
+
 
 
 <div class="parallax"> 
@@ -10,28 +12,25 @@ include 'template-blocks/header.php'; ?>
 </div>
 
 <div class="row full-width-block polaroid">
-    <a href="visit.php">
-        <div class="col-sm-6 polaroid-box">
-            <img src="/easytrade/assets/img/advice1.jpg" class="img-responsive" alt=""/>
-            <div class="content">
-                <h3>I need a tradesman or service.</h3>
-                <p>lorem ipsum </p>
-                <button class="btn btn-primary">More information</button>
-            </div>
-        </div>
-    </a>
-    <a href="visit.php">
-        <div class="col-sm-6 polaroid-box">
-            <img src="/easytrade/assets/img/advice1.jpg" class="img-responsive" alt=""/>
-            <div class="content">
-                <h3>I am a tradesman.</h3>
-                <p>lorem ipsum </p>
-                <button class="btn btn-primary">More information</button>
-            </div>
-        </div>
-    </a>
+    <?php 
+        $link = 'about.php';
+        $image = 'advice1.jpg';
+        $title = 'I need a tradesman or service.';
+        $content = 'lorem ipsum';
+        $button_text = 'More information';
+        include 'template-blocks/single-polaroid.php'; 
+    ?>
+
+    <?php 
+        $link = 'signup.php';
+        $image = 'advice1.jpg';
+        $title = 'I am a tradesman.';
+        $content = 'lorem ipsum';
+        $button_text = 'More information';
+        include 'template-blocks/single-polaroid.php'; 
+    ?>
 </div>
 
 <?php 
-include 'template-blocks/footer.php';
+include 'footer.php';
 ?>

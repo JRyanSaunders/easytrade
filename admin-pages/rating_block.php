@@ -1,7 +1,5 @@
 <form method="rating">
 
-    <!-- option to add polaroids??? how??? -->
-
     <fieldset>
         <label for="rating1">Rating 1</label>
         <input type="text" id="rating1" name="rating1"/>
@@ -33,17 +31,17 @@
     </fieldset> 
 
     <fieldset>
-        <label for="review_type1">Review 1</label>
+        <label for="review_type1">Review type 1</label>
         <input type="text" id="review_type1" name="review_type1"/>
     </fieldset> 
 
     <fieldset>
-        <label for="review_type2">Review 2</label>
+        <label for="review_type2">Review type 2</label>
         <input type="text" id="review_type2" name="review_type2"/>
     </fieldset> 
 
     <fieldset>
-        <label for="review_type3">Review 3</label>
+        <label for="review_type3">Review type 3</label>
         <input type="text" id="review_type3" name="review_type3"/>
     </fieldset> 
 

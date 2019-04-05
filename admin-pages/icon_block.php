@@ -26,32 +26,32 @@
     </fieldset>
 
     <fieldset>
-        <label for="icon_title1">Icon1</label>
-        <input type="text" id="icon_Title1" name="icon_Title1"/>
+        <label for="icon_title1">Icon title 1</label>
+        <input type="text" id="icon title1" name="icon_Title1"/>
     </fieldset>
 
     <fieldset>
-        <label for="icon_title2">Icon2</label>
+        <label for="icon_title2">Icon title 2</label>
         <input type="text" id="icon_Title2" name="icon_Title2"/>
     </fieldset>
 
     <fieldset>
-        <label for="icon_title3">Icon3</label>
+        <label for="icon_title3">Icon title 3</label>
         <input type="text" id="icon_Title3" name="icon_Title3"/>
     </fieldset>
 
     <fieldset>
-        <label for="icon_text1">Icon1</label>
+        <label for="icon_text1">Icon text 1</label>
         <input type="text" id="icon_text1" name="icon_text1"/>
     </fieldset>
 
     <fieldset>
-        <label for="icon_text2">Icon2</label>
+        <label for="icon_text2">Icon text 2</label>
         <input type="text" id="icon_text2" name="icon_text2"/>
     </fieldset>
 
     <fieldset>
-        <label for="icon_text3">Icon3</label>
+        <label for="icon_text3">Icon text 3</label>
         <input type="text" id="icon_text3" name="icon_text3"/>
     </fieldset>
 
