@@ -1,0 +1,11 @@
+<!-- 
+background_color
+polaroid_title1
+polaroid_text1
+polaroid_img1
+polaroid_link1
+polaroid_title2
+polaroid_text2
+polaroid_img2
+polaroid_link2
+-->

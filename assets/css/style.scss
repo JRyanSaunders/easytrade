@@ -9,6 +9,8 @@ Version: 1.0
 @import 'base/header';
 @import 'base/footer';
 @import 'base/layout';
+@import 'base/admin-header';
+@import 'base/core-site-info';
 
 @import 'templates/home';
 @import 'templates/about';
@@ -16,11 +18,13 @@ Version: 1.0
 @import 'blocks/page-header';
 @import 'blocks/parallax';
 @import 'blocks/polaroid';
+@import 'blocks/icon-block';
+@import 'blocks/image-message-block';
 
 
 
-/*@import 'templates/visit';
-@import 'templates/development';
-@import 'templates/tradesman';*/
+//@import 'templates/visit';
+//@import 'templates/development';
+//@import 'templates/tradesman';
 
 

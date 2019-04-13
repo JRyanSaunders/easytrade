@@ -18,43 +18,31 @@
 
 </head>
 
-<header>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span> 
-            </button>
-          <a class="navbar-brand" href="#">EasyTrader</a>
-        </div>
+<header class="admin-header">
 
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <form class="navbar-form navbar-left" action="/action_page.php">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search" name="search">
-                <div class="input-group-btn">
-                  <button class="btn btn-default" type="submit">
-                    <i class="glyphicon glyphicon-search"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Find</a></li>
-              <li><a href="#">More</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" class="signin">Sign in</a></li>
-              <li><a href="#">Register</a></li> 
-                <img class="img-responsive profile" src="/easytrade/assets/img/user.svg" alt="User">
-            </ul>
-        </div>
-    </div> 
-</nav>
+  <div class="admin-navbar">
+    <a href="#">Home</a>
+      <div class="navbar navbar-right">
+      <a href="#">firstname, Lastname</a>
+      <a href="#" class="pull-right"><img src="/easytrade/assets/img/profile.svg"></a> 
+      </div>
+
+  </div>
+
+  <div class="sidenav">
+    <a href="./core-site-info.php">Core site info</a>
+    <a class="active" href="./users.php">Users</a>
+    <button class="dropdown-btn">Pages
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="#">Page 1</a>
+      <a href="#">Page 2</a>
+      <a href="#">Page 3</a>
+    </div>
+    <a href="./forms.php">Forms</a>
+  </div>
     
 </header>
+
 <body class="<?php echo $template_name ?>">

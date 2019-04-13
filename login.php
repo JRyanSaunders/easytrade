@@ -1,22 +1,54 @@
 <?php
 $template_name = 'login';
-include 'template-blocks/header.php';
+include 'header.php';
 $page_title = 'login';
 $page_header_image = 'paint6.jpg';
-include 'template-blocks/page-header.php'; 
+include 'template-blocks/page-header-overlay.php'; 
 
-$username = $_POST['user_name'];
-$password = $_POST['password'];
-$conf_password = $_POST['conf_password'];
+if ($_POST) {
+
+    $username = $_POST['user_name'];
+    $password = $_POST['password'];
+    $conf_password = $_POST['conf_password'];
+
+    $errors = 'no';
+
+    // check username isnt empty
+
+    if ($password !== $conf_password) {
+        $errors = 'yes';
+        echo "passwords don't match";
+    }
+
+    if ($errors === 'no') {
+
+        $stored_password = false;
+
+        //get users data from database where username matches
+        $sql_query = "SELECT * FROM user WHERE USERNAME = " . $username;
+        $result = EasyTrade_Database::get_from_database($sql_query);
+        
+        if ($result->num_rows > 0) {
+            $stored_password = $row["PASSWORD"];
+        } else {
+            $errors = 'yes';
+            echo "nothing found with that username";
+        }
+
+        if ($stored_password === $password)
+        {
+            EasyTrade_Database::update_database_record('user', 'LOGGEDIN=1', "'USERNAME=" . $username . "'");
+        }
+        else {
+            $errors = 'yes';
+            echo "password incorrect";
+        }
+    }
+}
+
 
 echo $username;
-if ($password === $conf_password) {
-    echo "passwords match";
-    // Login
-}
-else {
-    echo "passwords don't match";
-}
+
 ?>
 
 <form method="post">

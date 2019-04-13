@@ -54,6 +54,7 @@ class EasyTrade_Database
 
             if ($conn->query($sql) === TRUE) {
                 echo "New record created successfully";
+                return mysqli_insert_id($conn);
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }

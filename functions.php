@@ -18,6 +18,7 @@ class EasyTradeCore
 
         /* Create Tables */
         include EasyTrade_Path . '/functions/create-tables.php';
+
     }
 
 	private function hook_actions()

@@ -1,49 +1,69 @@
 <?php
 $template_name = 'signup';
-include 'template-blocks/header.php';
+include 'header.php';
 $page_title = 'Signup';
 $page_header_image = 'paint6.jpg';
-include 'template-blocks/page-header.php'; 
+include 'template-blocks/page-header-overlay.php'; 
 
 $latest_birth_date = '';
 $current_date = date('Y/m/d');
 $newdate = strtotime ('-16 year', strtotime ($current_date)) ;
 $latest_birth_date = date( 'Y-m-d' , $newdate );
 
-$first_name = $_POST['first_name'];
-$last_name = $_POST['last_name'];
-$username = $_POST['user_name'];
-$password1 = $_POST['password'];
-$password2 = $_POST['confirm_password'];
-$email = $_POST['email_address'];
-$birthday = $_POST['bdaymonth'];
-$type = $_POST['type'];
+if ($_POST)
+{
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $username = $_POST['user_name'];
+    $password1 = $_POST['password'];
+    $password2 = $_POST['confirm_password'];
+    $email = $_POST['email_address'];
+    $birthday = $_POST['bdaymonth'];
+    $type = $_POST['type'];
 
-if (empty($first_name)) {
-    echo "firstname is empty";
-}
+    $errors = 'no';
 
-if (empty($last_name)) {
-    echo "lastname is empty";
-}
+    if (empty($first_name)) {
+        $errors = 'yes';
+        echo "firstname is empty";
+    }
 
-if (empty($username)) {
-    echo "username is empty";
-}
+    if (empty($last_name)) {
+        $errors = 'yes';
+        echo "lastname is empty";
+    }
 
-if ($password1 !== $password2) {
-    echo "passwords do not match";
-}
+    if (empty($username)) {
+        $errors = 'yes';
+        echo "username is empty";
+    }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "Invalid email format"; 
-  }
+    if ($password1 !== $password2) {
+        $errors = 'yes';
+        echo "passwords do not match";
+    }
 
-if (empty($type)) {
-    echo "type of user is empty";
-}
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors = 'yes';
+        echo "Invalid email format"; 
+    }
 
-?>
+    if (empty($type)) {
+        $errors = 'yes';
+        echo "type of user is empty";
+    }
+
+    if ($errors === 'no')
+    {
+        $user_data = "'" . $username . "','" . $password1 . "','" . $email . "'";
+        // add to database
+        $user_ID = EasyTrade_Database::insert_into_table('user', 'USERNAME, PASSWORD, EMAIL', $user_data);
+
+        $user_meta_data = "'" . $user_ID . "','" . $first_name . "','" . $last_name . "','" . $birthday . "','" . $type . "','" . date('Y/m/d') . "'";
+        EasyTrade_Database::insert_into_table('user_meta', 'USERID, FIRSTNAME, LASTNAME, BIRTHDAY, TYPE, ACCOUNT_CREATION_DATE', $user_meta_data);
+        // redirect to homepage
+    }
+} ?>
 
 <form method="post">
 
@@ -90,19 +110,16 @@ if (empty($type)) {
     <fieldset>
         <label>Select the correct field:</label>
             <label for="tradesman">I am a tradesman</label>
-                <input type="radio" id="tradesman" name="type" value="" checked>
+                <input type="radio" id="tradesman" name="type" value="tradesman" checked>
             <label for="customer"> am a customer looking for a tradesman</label>
-                <input type="radio" id="customer" name="type" value="">
+                <input type="radio" id="customer" name="type" value="customer">
             <label for="other">Other</label>
-                <input type="radio" id="other" name="type" value="">
+                <input type="radio" id="other" name="type" value="other">
     </fieldset>
 
     <fieldset>
         <input type="submit" value="Signup">
     </fieldset>
-
-</form>
-
 
 
 

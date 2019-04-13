@@ -1,21 +1,8 @@
 <?php
 $template_name = 'signup';
 include 'admin-header.php';
-
-
-
-include 'icon_block.php';
-
-
 ?>
-
-
-
-
-
-
-
-
+<div class="admin-page">
 <form method="home">
 
     <fieldset>
@@ -83,7 +70,7 @@ include 'icon_block.php';
 
 </form>
 
-
+</div>
 
 
 
