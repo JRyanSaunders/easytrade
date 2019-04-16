@@ -43,7 +43,7 @@ $rating_block_background_colour = '#FFF';
         $image = $block_1_polaroid_img1;
         $title = $block_1_polaroid_title1;
         $content = $block_1_polaroid_text1;
-        $button_text = $;
+        $button_text = '';
         include 'template-blocks/single-polaroid.php';
     ?>
 
