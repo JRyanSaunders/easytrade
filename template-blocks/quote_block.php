@@ -1,9 +1,0 @@
-<!-- 
-background_color
-quote1
-author1
-quote2
-author2
-quote3
-author3
--->

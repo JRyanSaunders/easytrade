@@ -42,14 +42,15 @@
               </div>
             </form>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#"><h3>Home</h3></a></li>
-              <li><a href="#"><h3>About</h3></a></li>
-              <li><a href="#"><h3>Find</h3></a></li>
-              <li><a href="#"><h3>More</h3></a></li>
+              <li class="active"><a href="home.php"><h3>Home</h3></a></li>
+              <li><a href="about.php"><h3>About</h3></a></li>
+              <li><a href="professional_advice.php"><h3>Professional Advice</h3></a></li>
+              <li><a href="reviews.php"><h3>Reviews</h3></a></li>
+              <li><a href="contact.php"><h3>Contact</h3></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" class="signin"><h3>Log in</h3></a></li>
-              <li><a href="#"><h3>Register</h3></a></li> 
+              <li><a href="login.php" class="signin"><h3>Log in</h3></a></li>
+              <li><a href="signup.php"><h3>Register</h3></a></li> 
                 <img class="img-responsive profile" src="/easytrade/assets/img/user.svg" alt="User">
             </ul>
         </div>

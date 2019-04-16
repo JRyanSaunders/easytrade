@@ -3,7 +3,7 @@ $template_name = 'login';
 include 'header.php';
 $page_title = 'login';
 $page_header_image = 'paint6.jpg';
-include 'template-blocks/page-header-overlay.php'; 
+include 'template-blocks/page-header.php'; 
 
 if ($_POST) {
 
@@ -25,19 +25,22 @@ if ($_POST) {
         $stored_password = false;
 
         //get users data from database where username matches
-        $sql_query = "SELECT * FROM user WHERE USERNAME = " . $username;
+        $sql_query = "SELECT * FROM user WHERE USERNAME = '" . $username . "'";
         $result = EasyTrade_Database::get_from_database($sql_query);
         
         if ($result->num_rows > 0) {
-            $stored_password = $row["PASSWORD"];
+            while($row = $result->fetch_assoc()) {
+                $stored_password = $row["PASSWORD"];
+            }
         } else {
             $errors = 'yes';
             echo "nothing found with that username";
         }
 
-        if ($stored_password === $password)
+        if ($stored_password == $password)
         {
-            EasyTrade_Database::update_database_record('user', 'LOGGEDIN=1', "'USERNAME=" . $username . "'");
+            EasyTrade_Database::update_database_record('user', 'LOGGEDIN="1"', "USERNAME='" . $username . "'");
+            echo "logged in " . $username;
         }
         else {
             $errors = 'yes';
@@ -45,10 +48,6 @@ if ($_POST) {
         }
     }
 }
-
-
-echo $username;
-
 ?>
 
 <form method="post">
@@ -82,5 +81,5 @@ echo $username;
 
 
 <?php 
-include 'template-blocks/footer.php';
+include 'footer.php';
 ?>

@@ -12,10 +12,16 @@ h1  {
     font-size: 45px;
 }
 h2  {
-    font-size: 36px;
+    font-size: 20px;
+    @include breakpoint(tablet) {
+        font-size: 36px;
+    }
 }
 h3 {
-    font-size: 21px;
+    font-size: 17px;
+    @include breakpoint(tablet) {
+        font-size: 21px;
+    }
 }
 h4 {
     
@@ -33,14 +39,65 @@ p {
     font-size: 16px;
     line-height: normal;
     text-align: left;
-    
-    color: #000000;    
+    color: #000000;
 }
 .large-text {
     @extend p;
     font-size: 20px;
 }
 button {
+    border-radius: 0!important;
+    font-weight: bold!important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @extend h3;
+    &.et-btn-whitebk, &.et-btn-lightbk, &.et-btn-medbk, &.et-btn-darkbk {
+        background-color: $primary-colour-dark;
+    }
+    &.et-btn-whitebk {
+        background-color: $white;
+        color: $primary-colour-dark;
+    }
+    &.et-btn-lightbk {
+        background-color: $primary-colour-light;
+        color: $white;
+    }
+    &.et-btn-medbk {
+        background-color: $primary-colour-medium;
+        color: $white;
+    }
+    &.et-btn-darkbk {
+        background-color: $primary-colour-dark;
+        color: $white;
+    }
+    &.et-btn-white, &.et-btn-light, &.et-btn-med, &.et-btn-dark {
+        border-width: 5px;
+        border-color: $primary-colour-dark;
+    }
+    &.et-btn-white {
+        border-color: $white;
+        color: $white;
+        background-color: $primary-colour-dark;
+    }
+    &.et-btn-light {
+        border-color: $primary-colour-light;
+        background-color: $white;
+        color: $primary-colour-dark;
+    }
+    &.et-btn-med {
+        border-color: $primary-colour-medium;
+        background-color: $white;
+        color: $primary-colour-dark;
+    }
+    &.et-btn-dark {
+        border-color: $primary-colour-dark;
+        background-color: $white;
+        color: $primary-colour-dark;
+    }
+
+
+
+
+
 
 }
 

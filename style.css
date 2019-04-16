@@ -3,7 +3,7 @@ Author: Jack Saunders
 Version: 1.0
 */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\000031}}
-h1, h2, h3 {
+h1, h2, h3, button, form input[type=submit] {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
@@ -19,13 +19,21 @@ h1 {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000314}}
 h2 {
-  font-size: 36px; }
+  font-size: 20px; }
+  @media (min-width: 500px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000314}}
+    h2 {
+      font-size: 36px; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000317}}
-h3 {
-  font-size: 21px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000320}}
+h3, button, form input[type=submit] {
+  font-size: 17px; }
+  @media (min-width: 500px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000320}}
+    h3, button, form input[type=submit] {
+      font-size: 21px; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000335}}
 p, .large-text {
   font-family: "Raleway";
   font-style: normal;
@@ -35,11 +43,60 @@ p, .large-text {
   text-align: left;
   color: #000000; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000344}}
 .large-text {
   font-size: 20px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000348}}
+button, form input[type=submit] {
+  border-radius: 0 !important;
+  font-weight: bold !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000353}}
+  button.et-btn-whitebk, form input.et-btn-whitebk[type=submit], button.et-btn-lightbk, form input.et-btn-lightbk[type=submit], button.et-btn-medbk, form input[type=submit], button.et-btn-darkbk, form input.et-btn-darkbk[type=submit] {
+    background-color: #2F4C57; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000356}}
+  button.et-btn-whitebk, form input.et-btn-whitebk[type=submit] {
+    background-color: #fff;
+    color: #2F4C57; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000360}}
+  button.et-btn-lightbk, form input.et-btn-lightbk[type=submit] {
+    background-color: #6893A3;
+    color: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000364}}
+  button.et-btn-medbk, form input[type=submit] {
+    background-color: #135067;
+    color: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000368}}
+  button.et-btn-darkbk, form input.et-btn-darkbk[type=submit] {
+    background-color: #2F4C57;
+    color: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000372}}
+  button.et-btn-white, form input.et-btn-white[type=submit], button.et-btn-light, form input.et-btn-light[type=submit], button.et-btn-med, form input.et-btn-med[type=submit], button.et-btn-dark, form input.et-btn-dark[type=submit] {
+    border-width: 5px;
+    border-color: #2F4C57; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000376}}
+  button.et-btn-white, form input.et-btn-white[type=submit] {
+    border-color: #fff;
+    color: #fff;
+    background-color: #2F4C57; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000381}}
+  button.et-btn-light, form input.et-btn-light[type=submit] {
+    border-color: #6893A3;
+    background-color: #fff;
+    color: #2F4C57; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000386}}
+  button.et-btn-med, form input.et-btn-med[type=submit] {
+    border-color: #135067;
+    background-color: #fff;
+    color: #2F4C57; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\0000391}}
+  button.et-btn-dark, form input.et-btn-dark[type=submit] {
+    border-color: #2F4C57;
+    background-color: #fff;
+    color: #2F4C57; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/elements\.scss}line{font-family:\00003104}}
 .btn-primary {
   margin: 0 auto;
   margin-bottom: 20px;
@@ -50,66 +107,151 @@ p, .large-text {
 .navbar-inverse {
   background-color: #2F4C57;
   border: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\000036}}
-  .navbar-inverse .navbar-form .input-group-btn button {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\000035}}
+  .navbar-inverse .navbar-form div {
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    margin: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000312}}
+  .navbar-inverse .navbar-form .input-group-btn button, .navbar-inverse .navbar-form .input-group-btn form input[type=submit], form .navbar-inverse .navbar-form .input-group-btn input[type=submit] {
     padding: 9px 12px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000319}}
   .navbar-inverse .navbar-nav li a {
     color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000321}}
     .navbar-inverse .navbar-nav li a:hover {
       background-color: #ddd;
       color: black; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000325}}
     .navbar-inverse .navbar-nav li a.signin {
       border: 2px solid #fff;
       padding-top: 6px;
       padding-bottom: 6px;
       margin-top: 7px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000325}}
-    .navbar-inverse .navbar-nav li a h3 {
-      font-size: 17px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000331}}
+    .navbar-inverse .navbar-nav li a h3, .navbar-inverse .navbar-nav li a button, .navbar-inverse .navbar-nav li a form input[type=submit], form .navbar-inverse .navbar-nav li a input[type=submit] {
+      font-size: 15px;
+      color: #ffffff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000337}}
   .navbar-inverse .navbar-nav li.active a {
     background-color: #2F4C57;
     color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000341}}
   .navbar-inverse .navbar-nav li.active:hover {
     background-color: #ddd;
-    color: black; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000341}}
+    color: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000348}}
   .navbar-inverse .navbar-nav .profile {
     height: 40px;
     padding: 3%;
     color: #fff; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\000031}}
-footer {
-  background: #3F729B;
-  padding: 30px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\000034}}
-  footer .row {
-    padding: 10px 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\000036}}
-    footer .row h3 {
-      text-transform: uppercase;
-      text-align: left;
-      color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000311}}
-    footer .row p, footer .row .large-text {
-      text-align: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000314}}
-    footer .row.dark-blue {
-      background-color: #1c2331; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000316}}
-      footer .row.dark-blue p, footer .row.dark-blue .large-text {
-        font-size: 10px; }
+.site-footer {
+  background-color: #2F4C57;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #dddddd; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\000039}}
+.site-footer hr {
+  border-top-color: #ffffff;
+  opacity: 0.5; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000314}}
+.site-footer hr.small {
+  margin: 20px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000318}}
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000326}}
+.site-footer a {
+  color: #dddddd; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000330}}
+.site-footer a:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000336}}
+.text-justify {
+  text-align: justify;
+  color: #ffffff; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000341}}
+.footer-links {
+  padding-left: 0;
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000346}}
+.footer-links li {
+  display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000350}}
+.footer-links a {
+  color: #dddddd; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000354}}
+.footer-links a:active, .footer-links a:focus, .footer-links a:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000359}}
+.footer-links.inline li {
+  display: inline-block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000363}}
+.site-footer .social-icons {
+  text-align: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000367}}
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #ffffff; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000377}}
+.copyright-text {
+  margin: 0;
+  color: #ffffff; }
+
+@media (max-width: 991px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000384}}
+  .site-footer [class^=col-] {
+    margin-bottom: 30px; } }
+@media (max-width: 767px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000391}}
+  .site-footer {
+    padding-bottom: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/footer\.scss}line{font-family:\0000395}}
+  .site-footer .copyright-text, .site-footer .social-icons {
+    text-align: center; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/layout\.scss}line{font-family:\000031}}
 body, html {
   height: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/layout\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/layout\.scss}line{font-family:\000034}}
+html {
+  width: 100vw; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/layout\.scss}line{font-family:\000038}}
+.row {
+  margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/layout\.scss}line{font-family:\0000312}}
 .full-width-block {
   background: #FFF;
   padding: 30px; }
@@ -164,7 +306,6 @@ body, html {
     /* Stay at the top */
     left: 0;
     background-color: #4b7180;
-    /* Black */
     overflow-x: hidden;
     /* Disable horizontal scroll */
     padding-top: 55px; }
@@ -183,9 +324,19 @@ body, html {
     cursor: pointer;
     outline: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000361}}
+    .admin-header .sidenav a a[data-toggle="collapse"], .admin-header .dropdown-btn a[data-toggle="collapse"] {
+      position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000365}}
+    .admin-header .sidenav a .dropdown-toggle::after, .admin-header .dropdown-btn .dropdown-toggle::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000373}}
     .admin-header .sidenav a:hover, .admin-header .dropdown-btn:hover {
       color: #f1f1f1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000378}}
     .admin-header .sidenav a.active::after, .admin-header .dropdown-btn.active::after {
       content: "";
       border-top: 20px solid transparent;
@@ -194,24 +345,28 @@ body, html {
       position: absolute;
       right: 0;
       top: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000390}}
   .admin-header .dropdown-container {
     display: none;
     background-color: #262626;
     padding-left: 8px; }
   @media screen and (max-height: 450px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000398}}
     .admin-header .sidenav {
       padding-top: 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000399}}
     .admin-header .sidenav a {
       font-size: 18px; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\00003104}}
 .admin-page {
   padding: 62px 10px;
   padding-left: 172px;
   /* Same as the width of the sidebar */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/admin-header\.scss}line{font-family:\00003109}}
+.pull-right {
+  padding: 0px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/core-site-info\.scss}line{font-family:\000031}}
 .square {
@@ -220,32 +375,62 @@ body, html {
   width: 30%;
   height: 30%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\000031}}
+form {
+  width: 75%;
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\000034}}
+  form div {
+    border: 1px solid #ddd;
+    padding: 20px 30px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 30px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\000039}}
+    form div h2 {
+      font-size: 30px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\0000315}}
+    form div fieldset {
+      margin: 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\0000317}}
+      form div fieldset label {
+        font-family: "Raleway";
+        text-transform: uppercase;
+        width: 40%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\0000324}}
+  form input[type=submit] {
+    position: absolute;
+    right: -25%;
+    top: 10%; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/home\.scss}line{font-family:\000032}}
 .home .parallax {
   background-image: url("/easytrade/assets/img/paint1.jpg");
   height: 85%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/home\.scss}line{font-family:\000036}}
-.home h1, .home h2 {
-  position: absolute;
-  left: 50%;
-  /* position the left edge of the element at the middle of the parent */
-  transform: translate(-50%, -50%);
-  font-weight: 500;
-  line-height: normal;
-  text-align: center;
-  color: #FFFFFF;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/home\.scss}line{font-family:\0000316}}
-.home h1 {
-  top: 32%;
-  /* position the top  edge of the element at the middle of the parent */
-  font-size: 30px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/home\.scss}line{font-family:\0000320}}
-.home h2 {
-  top: 37%;
-  /* position the top  edge of the element at the middle of the parent */
-  font-size: 20px;
-  width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/home\.scss}line{font-family:\000035}}
+  .home .parallax h1, .home .parallax h2 {
+    position: absolute;
+    left: 50%;
+    /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/home\.scss}line{font-family:\0000315}}
+  .home .parallax h1 {
+    top: 32%;
+    /* position the top  edge of the element at the middle of the parent */
+    font-size: 30px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/home\.scss}line{font-family:\0000319}}
+  .home .parallax h2 {
+    top: 37%;
+    /* position the top  edge of the element at the middle of the parent */
+    font-size: 20px;
+    width: 100%; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/home\.scss}line{font-family:\0000325}}
 .home .homesearch {
   padding: 6px;
@@ -280,6 +465,23 @@ body, html {
   font-size: 36px;
   padding: 10px;
   justify-content: space-around; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/contact\.scss}line{font-family:\000031}}
+.form {
+  padding: 10%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/visit\.scss}line{font-family:\000031}}
+.line {
+  z-index: 0;
+  width: 100%;
+  height: 6px;
+  background: #000000;
+  margin: 1%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/templates\/visit\.scss}line{font-family:\000039}}
+.imgcontainer {
+  padding: 4%;
+  position: relative; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/page-header\.scss}line{font-family:\000031}}
 .page-header, .page-header-overlay {
@@ -340,34 +542,72 @@ body, html {
   background-size: cover;
   position: relative; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\000032}}
+@media (min-width: 500px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\000031}}
+  .polaroid {
+    padding: 30px 50px; } }
+@media (min-width: 800px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\000031}}
+  .polaroid {
+    padding: 30px 100px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\000038}}
 .polaroid a {
   text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000310}}
   .polaroid a .polaroid-box {
     padding: 20px;
     text-align: center;
-    box-shadow: 5px 10px 18px #888888;
-    color: #000;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     text-decoration: none;
     background: #fff;
     border: 1px solid;
-    padding: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000314}}
+    margin-bottom: 20px; }
+    @media (min-width: 800px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000310}}
+      .polaroid a .polaroid-box {
+        margin: 0 10px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000322}}
     .polaroid a .polaroid-box:hover {
-      background: #dadada; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000318}}
+      background: #ddd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000325}}
+      .polaroid a .polaroid-box:hover button, .polaroid a .polaroid-box:hover form input[type=submit], form .polaroid a .polaroid-box:hover input[type=submit] {
+        background: #ddd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000329}}
     .polaroid a .polaroid-box .content {
-      margin-top: 25px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000320}}
-      .polaroid a .polaroid-box .content h3 {
-        margin-bottom: 20px; }
+      padding: 10px; }
+      @media (min-width: 500px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000329}}
+        .polaroid a .polaroid-box .content {
+          padding: 15px; } }
+      @media (min-width: 800px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000329}}
+        .polaroid a .polaroid-box .content {
+          padding: 25px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000337}}
+      .polaroid a .polaroid-box .content h2 {
+        margin-bottom: 20px;
+        color: #2F4C57;
+        text-align: center;
+        font-size: 22px; }
+        @media (min-width: 500px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000337}}
+          .polaroid a .polaroid-box .content h2 {
+            font-size: 28px; } }
+        @media (min-width: 800px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000337}}
+          .polaroid a .polaroid-box .content h2 {
+            font-size: 34px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/polaroid\.scss}line{font-family:\0000349}}
+      .polaroid a .polaroid-box .content p, .polaroid a .polaroid-box .content .large-text {
+        color: #2F4C57;
+        text-align: center;
+        margin-bottom: 25px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/icon-block\.scss}line{font-family:\000031}}
 .icon-block {
   padding: 4% 15%; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/icon-block\.scss}line{font-family:\000033}}
-  .icon-block h2, .icon-block h3, .icon-block p, .icon-block .large-text {
+  .icon-block h2, .icon-block h3, .icon-block button, .icon-block form input[type=submit], form .icon-block input[type=submit], .icon-block p, .icon-block .large-text {
     text-align: center; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/icon-block\.scss}line{font-family:\000036}}
   .icon-block .col-sm-4 {
@@ -377,8 +617,71 @@ body, html {
     margin: 0 auto;
     padding: 20px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/icon-block\.scss}line{font-family:\0000313}}
-  .icon-block h3 {
+  .icon-block h3, .icon-block button, .icon-block form input[type=submit], form .icon-block input[type=submit] {
     padding: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/rating-block\.scss}line{font-family:\000031}}
+.rating-block {
+  padding: 20px 5px; }
+  @media (min-width: 500px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/rating-block\.scss}line{font-family:\000031}}
+    .rating-block {
+      padding: 40px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/rating-block\.scss}line{font-family:\000036}}
+  .rating-block .rating {
+    padding: 15px;
+    margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/rating-block\.scss}line{font-family:\000039}}
+    .rating-block .rating .stars {
+      display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/rating-block\.scss}line{font-family:\0000311}}
+      .rating-block .rating .stars img {
+        width: 18.5%;
+        display: inline;
+        padding: 1%;
+        opacity: 0.4; }
+        @media (min-width: 500px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/rating-block\.scss}line{font-family:\0000311}}
+          .rating-block .rating .stars img {
+            width: 19%; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/rating-block\.scss}line{font-family:\0000321}}
+    .rating-block .rating .large-text {
+      text-align: center;
+      color: #fff;
+      font-weight: 400;
+      margin: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/rating-block\.scss}line{font-family:\0000327}}
+    .rating-block .rating h3, .rating-block .rating button, .rating-block .rating form input[type=submit], form .rating-block .rating input[type=submit] {
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      margin: 10px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/text-block\.scss}line{font-family:\000031}}
+.text-block {
+  padding: 20px 10px; }
+  @media (min-width: 500px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/text-block\.scss}line{font-family:\000031}}
+    .text-block {
+      padding: 60px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/text-block\.scss}line{font-family:\000036}}
+  .text-block h2 {
+    padding-bottom: 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/text-block\.scss}line{font-family:\000039}}
+  .text-block p, .text-block .large-text {
+    line-height: 1.5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/quote-block\.scss}line{font-family:\000031}}
+.quote-block {
+  padding: 60px 160px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/quote-block\.scss}line{font-family:\000034}}
+  .quote-block .item h2, .quote-block .item h3, .quote-block .item button, .quote-block .item form input[type=submit], form .quote-block .item input[type=submit] {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/quote-block\.scss}line{font-family:\0000310}}
+  .quote-block a.carousel-control {
+    background-image: none; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/image-message-block\.scss}line{font-family:\000031}}
 .image-message-block {
@@ -399,7 +702,7 @@ body, html {
     background: #fff;
     box-shadow: 5px 5px 6px #00000073; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/image-message-block\.scss}line{font-family:\0000319}}
-  .image-message-block button {
+  .image-message-block button, .image-message-block form input[type=submit], form .image-message-block input[type=submit] {
     margin: 0; }
 
 /*# sourceMappingURL=style.css.map */

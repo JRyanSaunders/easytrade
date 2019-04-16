@@ -38,7 +38,7 @@
     z-index: 2; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: rgb(75, 113, 128); /* Black */
+    background-color: rgb(75, 113, 128); 
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 55px;
   }
@@ -58,6 +58,18 @@
     cursor: pointer;
     outline: none;
     
+    a[data-toggle="collapse"] {
+      position: relative;
+  }
+  
+     .dropdown-toggle::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+  }
+
     &:hover {
       color: #f1f1f1;
     }
@@ -80,7 +92,7 @@
     background-color: #262626;
     padding-left: 8px;
   }
-  
+
    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
     @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -94,5 +106,8 @@
   padding-left: 172px; /* Same as the width of the sidebar */
 }
 
+.pull-right {
+  padding: 0px;
+}
 
 

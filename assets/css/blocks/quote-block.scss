@@ -1,0 +1,13 @@
+.quote-block {
+    padding: 60px 160px;
+    .item {
+        h2, h3 {
+            text-align: center;
+            color: $white;
+            padding-bottom: 25px;
+        }
+    }
+    a.carousel-control {
+        background-image: none;
+    }
+}

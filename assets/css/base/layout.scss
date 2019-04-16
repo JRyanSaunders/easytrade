@@ -1,6 +1,13 @@
 body, html {
     height: 100%;
 }
+html {
+    width: 100vw;
+}
+
+.row {
+    margin: 0;
+}
 
 .full-width-block {
     background: #FFF;

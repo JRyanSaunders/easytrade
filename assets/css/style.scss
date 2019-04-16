@@ -11,14 +11,23 @@ Version: 1.0
 @import 'base/layout';
 @import 'base/admin-header';
 @import 'base/core-site-info';
+@import 'base/form';
 
 @import 'templates/home';
 @import 'templates/about';
+@import 'templates/contact';
+@import 'templates/development';
+@import 'templates/pricing';
+@import 'templates/visit';
+@import 'templates/tradesman';
 
 @import 'blocks/page-header';
 @import 'blocks/parallax';
 @import 'blocks/polaroid';
 @import 'blocks/icon-block';
+@import 'blocks/rating-block';
+@import 'blocks/text-block';
+@import 'blocks/quote-block';
 @import 'blocks/image-message-block';
 
 

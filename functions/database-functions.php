@@ -63,13 +63,15 @@ class EasyTrade_Database
 
     }
 
-    public function get_from_database($sql_query) {
+    public function get_from_database($sql) {
 
         $conn = EasyTrade_Database::connect_to_database();
 
-        $result = $conn->query($sql_query);
-
-        return $result;
+        if ($conn->query($sql) == TRUE) {
+            return $conn->query($sql);
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }     
 
     }
 

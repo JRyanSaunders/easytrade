@@ -14,10 +14,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../../style.css">
 
 </head>
-
+<?php   include '../../functions/database-functions.php';
+include '../../functions/create-tables.php';
+         ?>
 <header class="admin-header">
 
   <div class="admin-navbar">
@@ -30,18 +32,31 @@
   </div>
 
   <div class="sidenav">
-    <a href="./core-site-info.php">Core site info</a>
-    <a class="active" href="./users.php">Users</a>
-    <button class="dropdown-btn">Pages
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-      <a href="#">Page 1</a>
-      <a href="#">Page 2</a>
-      <a href="#">Page 3</a>
-    </div>
-    <a href="./forms.php">Forms</a>
-  </div>
+  <ul class="list-unstyled components">
+            <li class="active">
+                <a href="./core-site-info.php">Core site info</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="./users.php">Users</a>
+            </li>
+            <li>
+                <a href="./forms.php">Forms</a>
+            </li>
+        </ul>
     
 </header>
 

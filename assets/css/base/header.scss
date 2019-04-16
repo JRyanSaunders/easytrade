@@ -2,6 +2,12 @@
     background-color: $primary-colour-dark;
     border: none;
     .navbar-form {
+        div {
+            padding: 0;
+            box-shadow: none;
+            border: none;
+            margin: auto;
+        }
         .input-group-btn {
             button {
                 padding: 9px 12px;
@@ -23,7 +29,8 @@
                     margin-top: 7px;
                 }
                 h3 {
-                    font-size: 17px;
+                    font-size: 15px;
+                    color: #ffffff;
                 }
             }
             &.active {
@@ -34,7 +41,7 @@
                 &:hover 
                 {
                     background-color: $grey;
-                    color: black;
+                    color: #fff;
                 }
             }
         }
@@ -44,4 +51,5 @@
             color: $white;
         }
     }
+
 }
