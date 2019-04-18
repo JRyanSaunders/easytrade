@@ -4,6 +4,13 @@
      * RATING BLOCK 1
      *
      */
+    $rating_block_1_background_color_1 = $_POST['block_' . $block_ID .'rating_block_background_color'];
+    if (!empty($rating_block_1_background_color_1)) {
+        $column_to_update = 'METAVALUE="' . $rating_block_1_background_color_1 . '"';
+        $row_to_update = $page_finder . '"block_' . $block_ID . 'rating_block_background_color")';
+        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
+    }
+    
     $rating_block_1_block_color_1 = $_POST['block_' . $block_ID .'_rating_block_color1'];
     if (!empty($rating_block_1_block_color_1)) {
         $column_to_update = 'METAVALUE="' . $rating_block_1_block_color_1 . '"';
@@ -11,13 +18,6 @@
         EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
     }
 
-    $rating_block_1_background_color_1 = $_POST['block_' . $block_ID .'_rating_block_background_color_1'];
-    if (!empty($rating_block_1_background_color_1)) {
-        $column_to_update = 'METAVALUE="' . $rating_block_1_background_color_1 . '"';
-        $row_to_update = $page_finder . '"block_' . $block_ID . '_rating_block_background_color_1")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
-    
     $rating_block_1_rating_1 = $_POST['block_' . $block_ID .'_rating_block_rating1'];
     if (!empty($rating_block_1_rating_1)) {
         $column_to_update = 'METAVALUE="' . $rating_block_1_rating_1 . '"';
@@ -39,6 +39,13 @@
         EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
     }
 
+    $rating_block_1_block_color2 = $_POST['block_' . $block_ID .'_rating_block_color2'];
+    if (!empty($rating_block_1_block_color2)) {
+        $column_to_update = 'METAVALUE="' . $rating_block_1_block_color2 . '"';
+        $row_to_update = $page_finder . '"block_' . $block_ID . '_rating_block_color2")';
+        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
+    }
+
     $rating_block_1_rating_2 = $_POST['block_' . $block_ID .'_rating_block_rating2'];
     if (!empty($rating_block_1_rating_2)) {
         $column_to_update = 'METAVALUE="' . $rating_block_1_rating_2 . '"';
@@ -57,6 +64,13 @@
     if (!empty($rating_block_1_review_type_2)) {
         $column_to_update = 'METAVALUE="' . $rating_block_1_review_type_2 . '"';
         $row_to_update = $page_finder . '"block_' . $block_ID . '_rating_block_review_type2")';
+        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
+    }
+
+    $rating_block_1_block_color3 = $_POST['block_' . $block_ID .'_rating_block_color3'];
+    if (!empty($rating_block_1_block_color3)) {
+        $column_to_update = 'METAVALUE="' . $rating_block_1_block_color3 . '"';
+        $row_to_update = $page_finder . '"block_' . $block_ID . '_rating_block_color3")';
         EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
     }
 

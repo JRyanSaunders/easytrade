@@ -1,5 +1,5 @@
 <?php
-include 'admin-header.php';
+include '../admin-header.php';
 
 //THIS IS A TEMPLATE FOR EACH OF THE BLOG POSTS (PRICING/VISIT/DEVELOPMENT)
 
@@ -24,106 +24,89 @@ if ($_POST) {
         EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
     }
 
-    //text block
+    $block_ID = 1;
+    include '../block-validation/text_block_validation.php';
 
-    $text_block_2_background_color = $_POST['2_text_block_background_color'];
-    if (!empty($text_block_2_background_color)) {
-        $column_to_update = 'METAVALUE="' .  $text_block_2_background_color . '"';
-        $row_to_update = $page_finder . '"2_text_block_background_color")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
+    $block_ID = 1;
+    include '../block-validation/image_message_block_submit.php';
 
-    $text_block_2_lead_title = $_POST['2_text_block_lead_title'];
-    if (!empty($text_block_2_lead_title)) {
-        $column_to_update = 'METAVALUE="' .  $text_block_2_lead_title . '"';
-        $row_to_update = $page_finder . '"2_text_block_lead_title")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
-
-    $text_block_2_text = $_POST['2_text_block_text'];
-    if (!empty($text_block_2_text)) {
-        $column_to_update = 'METAVALUE="' .  $text_block_2_text . '"';
-        $row_to_update = $page_finder . '"2_text_block_text")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
-
-    //image message block
-
-    $image_message_block_3_image_position_1 = $_POST['3_message_block_image_position'];
-    if (!empty($image_message_block_3_image_position_1)) {
-        $column_to_update = 'METAVALUE="' . $image_message_block_3_image_position_1 . '"';
-        $row_to_update = $page_finder . '"3_message_block_image_position")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
-
-    $image_message_block_3_image_1 = $_POST['3_message_block_image'];
-    if (!empty($image_message_block_3_image_1)) {
-        $column_to_update = 'METAVALUE="' . $image_message_block_3_image_1 . '"';
-        $row_to_update = $page_finder . '"3_message_block_image")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
-
-    $image_message_block_3_image_alt_text_1 = $_POST['3_message_block_alt_text'];
-    if (!empty($image_message_block_3_image_alt_text_1)) {
-        $column_to_update = 'METAVALUE="' . $image_message_block_3_image_alt_text_1 . '"';
-        $row_to_update = $page_finder . '"3_image_alt_text")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
-
-    $image_message_block_3_lead_title_1 = $_POST['3_message_block_lead_title'];
-    if (!empty($image_message_block_3_lead_title_1)) {
-        $column_to_update = 'METAVALUE="' . $image_message_block_3_lead_title_1  . '"';
-        $row_to_update = $page_finder . '"3_message_block_lead_title")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
-
-    $image_message_block_3_content_1 = $_POST['3_message_block_content'];
-    if (!empty($image_message_block_3_content_1)) {
-        $column_to_update = 'METAVALUE="' . $image_message_block_3_content_1 . '"';
-        $row_to_update = $page_finder . '"3_message_block_content")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
-
-    $image_message_block_3_button_colour_1 = $_POST['3_message_block_button_colour'];
-    if (!empty($image_message_block_3_button_colour_1)) {
-        $column_to_update = 'METAVALUE="' . $image_message_block_3_button_colour_1 . '"';
-        $row_to_update = $page_finder . '"3_message_block_button_colour")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
-
-    $image_message_block_3_link_1 = $_POST['3_message_block_link'];
-    if (!empty($image_message_block_3_link_1)) {
-        $column_to_update = 'METAVALUE="' . $image_message_block_3_link_1 . '"';
-        $row_to_update = $page_finder . '"3_message_block_link")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
+    $block_ID = 1;
+    include '../block-validation/polaroid_block_submit.php';
 
 }
+
+$get_page_title = EasyTrade_Database::get_from_database("SELECT `PAGE_TITLE` FROM `page` WHERE `ID` = $page_ID");
+if ($get_page_title->num_rows>0) {
+    while($row = $get_page_title->fetch_assoc()) {
+        $page_title = $row['PAGE_TITLE'];
+    }
+}
+
+$get_page_meta = EasyTrade_Database::get_from_database("SELECT * FROM `page_meta` WHERE `PAGEID` = $page_ID");
+if ($get_page_meta->num_rows>0) {
+    while($row = $get_page_meta->fetch_assoc()) {
+        $variable_name = $row["METAKEY"];
+        $$variable_name = $row["METAVALUE"];
+    }
+}
+
+$page_subtitle = (isset($page_subtitle) == 1) ? $page_subtitle : '';
 ?>
 
 <div class="admin-page">
 <form method="post">
 
-<div class="main-header">
-        <h2>Core Page Information</h2>
-        <fieldset>
-            <label for="page_title">Page Title</label>
-            <input type="text" id="page_title" name="page_title"/>
-        </fieldset>
+    <div class="main-header">
+    <h2>Core Page Information</h2>
+    <fieldset>
+        <label for="page_title">Page Title</label>
+        <input type="text" id="page_title" name="page_title"/>
+    </fieldset>
 
-        <fieldset>
-            <label for="page_subtitle">Page Subtitle</label>
-            <input type="text" id="page_subtitle" name="page_subtitle"/>
-        </fieldset>   
+    <fieldset>
+        <label for="page_subtitle">Page Subtitle</label>
+        <input type="text" id="page_subtitle" name="page_subtitle"/>
+    </fieldset>   
     </div>
 
     <?php
 
-    $block_ID = 1;
-    include '../blocks/polaroid_block.php';
+        $block_ID = 1;
+        $text_block_background_color = (isset($block_1_text_block_background_color) == 1) ? $block_1_text_block_background_color : '';
+        $text_block_lead_title = (isset($block_1_text_block_lead_title) == 1) ? $block_1_text_block_lead_title : '';
+        $text_block_text = (isset($block_1_text_block_text) == 1) ? $block_1_text_block_text : '';
+        include '../blocks/text_block.php';
 
-    $block_ID = 2;
-    include '../blocks/polaroid_block.php';
+        $block_ID = 1;
+        $message_block_image_position = (isset($block_1_message_block_image_position) == 1) ? $block_1_message_block_image_position : '';
+        $message_block_image = (isset($block_1_message_block_image) == 1) ? $block_1_message_block_image : '';
+        $message_block_alt_text = (isset($block_1_message_block_alt_text) == 1) ? $block_1_message_block_alt_text : '';
+        $message_block_lead_title = (isset($block_1_message_block_lead_title) == 1) ? $block_1_message_block_lead_title : '';
+        $message_block_content = (isset($block_1_message_block_content) == 1) ? $block_1_message_block_content : '';
+        $message_block_button_colour = (isset($block_1_message_block_button_colour) == 1) ? $block_1_message_block_button_colour : '';
+        $message_block_link = (isset($block_1_message_block_link) == 1) ? $block_1_message_block_link : '';
+        include '../blocks/image_message_block.php';
+
+        $background_color = (isset($block_1_background_color) == 1) ? $block_1_background_color : '';
+        $text_column_block_column_1_lead_title = (isset($block_1_text_column_block_column_1_lead_title) == 1) ? $block_1_text_column_block_column_1_lead_title : '';
+        $text_column_block_column_1_text = (isset($block_1_text_column_block_column_1_text) == 1) ? $block_1_text_column_block_column_1_text : '';
+        $text_column_block_column_2_lead_title = (isset($block_1_text_column_block_column_2_lead_title) == 1) ? $block_1_text_column_block_column_2_lead_title : '';
+        $text_column_block_column_2_text = (isset($block_1_text_column_block_column_2_text) == 1) ? $block_1_text_column_block_column_2_text : '';
+        include '../blocks/text_column_block.php';
+
+        $block_ID = 1;
+        $polaroid_background_color = (isset($block_1_polaroid_background_color) == 1) ? $block_1_polaroid_background_color : '';
+        $polaroid_title1 = (isset($block_1_polaroid_title1) == 1) ? $block_1_polaroid_title1 : '';
+        $polaroid_text1 = (isset($block_1_polaroid_text1) == 1) ? $block_1_polaroid_text1 : '';
+        $polaroid_img1 = (isset($block_1_polaroid_img1) == 1) ? $block_1_polaroid_img1 : '';
+        $polaroid_link1 = (isset($block_1_polaroid_link1) == 1) ? $block_1_polaroid_link1 : '';
+        $polaroid_button_name1 = (isset($block_1_polaroid_button_name1) == 1) ? $block_1_polaroid_button_name2 : '';
+        $polaroid_title2 = (isset($block_1_polaroid_title2) == 1) ? $block_1_polaroid_title2 : '';
+        $polaroid_text2 = (isset($block_1_polaroid_text2) == 1) ? $block_1_polaroid_text2 : '';
+        $polaroid_img2 = (isset($block_1_polaroid_img2) == 1) ? $block_1_polaroid_img2 : '';
+        $polaroid_link2 = (isset($block_1_polaroid_link2) == 1) ? $block_1_polaroid_link2 : '';
+        $polaroid_button_name2 = (isset($block_1_polaroid_button_name2) == 1) ? $block_1_polaroid_button_name2 : '';
+        include '../blocks/polaroid_block.php';
     ?>
 
     <input type="submit" value="save">

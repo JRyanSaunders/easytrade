@@ -3,7 +3,7 @@
     <!-- Main Information -->
     <fieldset>
         <label for="background_color">background color</label>
-        <input type="text" id="background_color" name="block_<?php echo $block_ID ?>_background_color"/>
+        <input type="color" id="background_color" name="block_<?php echo $block_ID ?>_background_color"/>
     </fieldset>
 
     <!-- Section 1 -->

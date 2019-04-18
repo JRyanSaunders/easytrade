@@ -4,7 +4,7 @@
             <img src="/easytrade/assets/img/<?php echo $image ?>" class="img-responsive" alt=""/>
             <div class="content">
                 <h2><?php echo $title ?></h2>
-                <p>l<?php echo $content ?></p>
+                <p><?php echo $content ?></p>
                 <button class="btn et-btn-med"><?php echo $button_text ?></button>
             </div>
         </div>

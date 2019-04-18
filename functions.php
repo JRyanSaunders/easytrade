@@ -1,6 +1,6 @@
 <?php
 
-define('EasyTrade_Path', getcwd());
+define('EasyTrade_Path', __DIR__);
 
 class EasyTradeCore
 {

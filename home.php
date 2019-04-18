@@ -21,15 +21,7 @@ if ($all_page_data->num_rows > 0) {
     }
 }
 
-// Delete these once you have matched up the correct fields
-$text_block_background_colour = '#FFF';
-$text_block_column_background_colour = '#6893A3';
-$quote_block_background_colour = '#6893A3';
-$rating_block_background_colour = '#FFF';
-
 ?>
-
-
 
 <div class="parallax">
     <h1><?php echo $page_title ?></h1>
@@ -43,37 +35,36 @@ $rating_block_background_colour = '#FFF';
         $image = $block_1_polaroid_img1;
         $title = $block_1_polaroid_title1;
         $content = $block_1_polaroid_text1;
-        $button_text = '';
+        $button_text = $block_1_polaroid_button_name1;
         include 'template-blocks/single-polaroid.php';
     ?>
 
     <?php
-        $link = 'signup.php';
-        $image = 'advice1.jpg';
+        $link = $block_1_polaroid_link2;
+        $image = $block_1_polaroid_img2;
         $title = $block_1_polaroid_title2;
-        $content = 'lorem ipsum';
-        $button_text = 'More information';
+        $content = $block_1_polaroid_text2;
+        $button_text = $block_1_polaroid_button_name2;
         include 'template-blocks/single-polaroid.php';
     ?>
 </div>
 
-<div class="row" style="background-color: <?php echo $text_block_background_colour ?>">
+<div class="row" style="background-color: <?php echo $block_1_text_block_background_color ?>">
     <?php
-        $lead_title = 'I need a tradesman or service.';
-        $content = 'Interesting test about this icons and how it really changed your life OMG so exciting Interesting test about this icons and how it really changed your life OMG so exciting Interesting test about this icons and how it really changed your life OMG so exciting Interesting test about this icons and how it really changed your life OMG so exciting
-        Interesting test about this icons and how it really changed your life OMG so exciting Interesting test about this icons and how it really changed your life OMG so exciting Interesting test about this icons and how it really changed your life OMG so exciting Interesting test about this icons and how it really changed your life OMG so exciting';
+        $lead_title = $block_1_text_block_lead_title;
+        $content = $block_1_text_block_text;
         include 'template-blocks/text-block.php';
     ?>
 </div>
 
-<div class="row" style="background-color: <?php echo $quote_block_background_colour ?>">
+<div class="row" style="background-color: <?php echo $block_1_quote_block_background_color ?>">
     <?php
-        $quote1 = 'INTERESTING QUOTE RECCOMMENDING THE WEBSITE OR THE TRADEMSMAN GOES IN THIS SLOT IT LOOKS REALLY NICE';
-        $author1 = 'Author 1';
-        $quote2 = 'INTERESTING QUOTE RECCOMMENDING THE WEBSITE OR THE TRADEMSMAN GOES IN THIS SLOT IT LOOKS REALLY NICE';
-        $author2 = 'Author 2';
-        $quote3 = 'INTERESTING QUOTE RECCOMMENDING THE WEBSITE OR THE TRADEMSMAN GOES IN THIS SLOT IT LOOKS REALLY NICE';
-        $author3 = 'Author 3';
+        $quote1 = $block_1_quote1;
+        $author1 = $block_1_author1;
+        $quote2 = $block_1_quote2;
+        $author2 = $block_1_author2;
+        $quote3 = $block_1_quote3;
+        $author3 = $block_1_author3;
         include 'template-blocks/quote-block.php';
     ?>
 </div>

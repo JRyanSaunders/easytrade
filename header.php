@@ -14,10 +14,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <?php 
+    if ($template_name == 'blog-post') { ?>
+      <link rel="stylesheet" type="text/css" href="../style.css">
+    <?php }
+    else { ?>
+      <link rel="stylesheet" type="text/css" href="style.css'">
+    <?php } ?>
+
 
 </head>
-<?php include 'functions.php'; ?>
+<?php 
+if ($template_name == 'blog-post') {
+  include '../functions.php';
+  echo 'template is blog post';
+}
+else {
+  include 'functions.php';
+} ?>
 <header>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -49,7 +64,7 @@
               <li><a href="contact.php"><h3>Contact</h3></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="login.php" class="signin"><h3>Log in</h3></a></li>
+              <li><a href="login.php" class="btn signin"><h3>Log in</h3></a></li>
               <li><a href="signup.php"><h3>Register</h3></a></li> 
                 <img class="img-responsive profile" src="/easytrade/assets/img/user.svg" alt="User">
             </ul>

@@ -123,25 +123,19 @@ button, form input[type=submit] {
     .navbar-inverse .navbar-nav li a:hover {
       background-color: #ddd;
       color: black; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000325}}
-    .navbar-inverse .navbar-nav li a.signin {
-      border: 2px solid #fff;
-      padding-top: 6px;
-      padding-bottom: 6px;
-      margin-top: 7px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000328}}
     .navbar-inverse .navbar-nav li a h3, .navbar-inverse .navbar-nav li a button, .navbar-inverse .navbar-nav li a form input[type=submit], form .navbar-inverse .navbar-nav li a input[type=submit] {
       font-size: 15px;
       color: #ffffff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000334}}
   .navbar-inverse .navbar-nav li.active a {
     background-color: #2F4C57;
     color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000338}}
   .navbar-inverse .navbar-nav li.active:hover {
     background-color: #ddd;
     color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/header\.scss}line{font-family:\0000345}}
   .navbar-inverse .navbar-nav .profile {
     height: 40px;
     padding: 3%;
