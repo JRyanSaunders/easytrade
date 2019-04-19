@@ -21,7 +21,7 @@ if ($all_page_data->num_rows > 0) {
     }
 }
 
-$page_header_image = 'paint6.jpg';
+$blog = ($template_name == 'blog-post') ? 'blog' : false;
 include 'template-blocks/page-header.php';
 ?>
 

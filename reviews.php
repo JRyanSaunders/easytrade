@@ -21,12 +21,12 @@ if ($all_page_data->num_rows > 0) {
     }
 }
 
-$page_header_image = 'paint6.jpg';
+$blog = ($template_name == 'blog-post') ? 'blog' : false;
 include 'template-blocks/page-header.php';
 ?>
 
 <!--- RATING BLOCK --->
-<div class="row rating-block" style="background-color: <?php echo $block_1_rating_block_background_color_1 ?>">
+<div class="row rating-block" style="background-color: <?php echo $block_1_rating_block_background_color ?>">
     <div class="row">
         <?php
             $rating = $block_1_rating_block_rating1;
@@ -48,6 +48,9 @@ include 'template-blocks/page-header.php';
             include 'template-blocks/single-rating.php';
         ?>
     </div>
+</div>
+<!--- RATING BLOCK --->
+<div class="row rating-block" style="background-color: <?php echo $block_2_rating_block_background_color ?>">
     <div class="row">
         <?php
             $rating = $block_2_rating_block_rating1;
@@ -69,6 +72,9 @@ include 'template-blocks/page-header.php';
             include 'template-blocks/single-rating.php';
         ?>
     </div>
+</div>
+<!--- RATING BLOCK --->
+<div class="row rating-block" style="background-color: <?php echo $block_3_rating_block_background_color ?>">
     <div class="row">
         <?php
             $rating = $block_3_rating_block_rating1;

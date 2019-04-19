@@ -8,8 +8,8 @@ class EasyTrade_Create_Tables
         $this->create_users_meta_table();
         $this->create_pages_table();
         $this->create_page_meta_table();
-        $this->create_blocks_table();
-        $this->create_blocks_meta_table();
+        $this->create_entry_table();
+        $this->create_entry_meta_table();
         $this->create_pages_blocks_table();
         $this->create_core_site_info_table();
 
@@ -83,7 +83,7 @@ class EasyTrade_Create_Tables
 
     public function create_blocks_table() {
 
-        $table_name = 'blocks';
+        $table_name = 'entry';
 
         $table_fields = '
             ID int(11) AUTO_INCREMENT,
@@ -96,7 +96,7 @@ class EasyTrade_Create_Tables
 
     public function create_blocks_meta_table() {
 
-        $table_name = 'blocks_meta';
+        $table_name = 'entry_meta';
 
         $table_fields = '
             ID int(11) AUTO_INCREMENT,
@@ -137,6 +137,8 @@ class EasyTrade_Create_Tables
         $new_table = EasyTrade_Database::create_database_table($table_name, $table_fields);
 
     }
+
+
 
 }
 

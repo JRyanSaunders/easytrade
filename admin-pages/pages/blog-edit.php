@@ -15,12 +15,7 @@ if ($_POST) {
     $table_to_update = "page_meta";
     $page_finder = '(PAGEID=' . $page_ID . ' AND METAKEY=';
 
-    $page_subtitle = $_POST['page_subtitle'];
-    if (!empty($page_subtitle)) {
-        $column_to_update = 'METAVALUE="' . $page_subtitle . '"';
-        $row_to_update = $page_finder . '"page_subtitle")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
+    include '../block-validation/page_header_submit.php';
 
     $block_ID = 2;
     include '../block-validation/polaroid_block_submit.php';
@@ -44,28 +39,14 @@ if ($get_page_meta->num_rows>0) {
     }
 }
 
-$page_subtitle = (isset($page_subtitle) == 1) ? $page_subtitle : '';
 
 // THIS IS THE PROFFESSIONAL ADVICE PAGE
 
 ?>
 <div class="admin-page">
 <form method="post">
+    <?php include '../blocks/page_header.php';
 
-    <div class="main-header">
-        <h2>Core Page Information</h2>
-        <fieldset>
-            <label for="page_title">Page Title</label>
-            <input type="text" id="page_title" name="page_title" value="<?php echo $page_title ?>"/>
-        </fieldset>
-
-        <fieldset>
-            <label for="page_subtitle">Page Subtitle</label>
-            <input type="text" id="page_subtitle" name="page_subtitle" value="<?php echo $page_subtitle ?>"/>
-        </fieldset>   
-    </div>
-
-    <?php
         $block_ID = 2;
         $polaroid_background_color = (isset($block_2_polaroid_background_color) == 1) ? $block_2_polaroid_background_color : '';
         $polaroid_title1 = (isset($block_2_polaroid_title1) == 1) ? $block_2_polaroid_title1 : '';

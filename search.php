@@ -1,6 +1,8 @@
 <?php
-$template_name = 'default';
-include 'template-blocks/header.php';
+$template_name = 'search';
+include 'header.php';
+
+$page_ID = 11;
 
 // Page Title
 $get_page_title = EasyTrade_Database::get_from_database("SELECT PAGE_TITLE FROM page WHERE ID=" . $page_ID);
@@ -23,11 +25,8 @@ $blog = ($template_name == 'blog-post') ? 'blog' : false;
 include 'template-blocks/page-header.php';
 ?>
 
-<p>Default Sample Content</p>
-<p>This page is used as a base for all other page templates.</p>
-<p>When creating a new page template, I copy this file</p>
-
+<p>Search Results Page</p>
 
 <?php 
-include 'template-blocks/footer.php';
+include 'footer.php';
 ?>

@@ -1,9 +1,5 @@
 <?php
-include '../admin-header.php';
-
-//THIS IS A TEMPLATE FOR EACH OF THE BLOG POSTS (PRICING/VISIT/DEVELOPMENT)
-
-$page_ID = 7; // Got this from the database
+//THIS IS A TEMPLATE FOR ALL OF THE BLOG POSTS (PRICING/VISIT/DEVELOPMENT)
 
 if ($_POST) {
 
@@ -17,21 +13,16 @@ if ($_POST) {
     $table_to_update = "page_meta";
     $page_finder = '(PAGEID=' . $page_ID . ' AND METAKEY=';
 
-    $page_subtitle = $_POST['page_subtitle'];
-    if (!empty($page_subtitle)) {
-        $column_to_update = 'METAVALUE="' . $page_subtitle . '"';
-        $row_to_update = $page_finder . '"page_subtitle")';
-        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-    }
+    include '../../block-validation/page_header_submit.php';
 
     $block_ID = 1;
-    include '../block-validation/text_block_validation.php';
+    include '../../block-validation/text_column_block_validation.php';
 
     $block_ID = 1;
-    include '../block-validation/image_message_block_submit.php';
+    include '../../block-validation/image_message_block_submit.php';
 
     $block_ID = 1;
-    include '../block-validation/polaroid_block_submit.php';
+    include '../../block-validation/polaroid_block_submit.php';
 
 }
 
@@ -50,32 +41,17 @@ if ($get_page_meta->num_rows>0) {
     }
 }
 
-$page_subtitle = (isset($page_subtitle) == 1) ? $page_subtitle : '';
 ?>
 
 <div class="admin-page">
-<form method="post">
-
-    <div class="main-header">
-    <h2>Core Page Information</h2>
-    <fieldset>
-        <label for="page_title">Page Title</label>
-        <input type="text" id="page_title" name="page_title"/>
-    </fieldset>
-
-    <fieldset>
-        <label for="page_subtitle">Page Subtitle</label>
-        <input type="text" id="page_subtitle" name="page_subtitle"/>
-    </fieldset>   
-    </div>
-
-    <?php
+    <form method="post">
+        <?php include '../../blocks/page_header.php';
 
         $block_ID = 1;
         $text_block_background_color = (isset($block_1_text_block_background_color) == 1) ? $block_1_text_block_background_color : '';
         $text_block_lead_title = (isset($block_1_text_block_lead_title) == 1) ? $block_1_text_block_lead_title : '';
         $text_block_text = (isset($block_1_text_block_text) == 1) ? $block_1_text_block_text : '';
-        include '../blocks/text_block.php';
+        include '../../blocks/text_block.php';
 
         $block_ID = 1;
         $message_block_image_position = (isset($block_1_message_block_image_position) == 1) ? $block_1_message_block_image_position : '';
@@ -85,14 +61,14 @@ $page_subtitle = (isset($page_subtitle) == 1) ? $page_subtitle : '';
         $message_block_content = (isset($block_1_message_block_content) == 1) ? $block_1_message_block_content : '';
         $message_block_button_colour = (isset($block_1_message_block_button_colour) == 1) ? $block_1_message_block_button_colour : '';
         $message_block_link = (isset($block_1_message_block_link) == 1) ? $block_1_message_block_link : '';
-        include '../blocks/image_message_block.php';
+        include '../../blocks/image_message_block.php';
 
         $background_color = (isset($block_1_background_color) == 1) ? $block_1_background_color : '';
         $text_column_block_column_1_lead_title = (isset($block_1_text_column_block_column_1_lead_title) == 1) ? $block_1_text_column_block_column_1_lead_title : '';
         $text_column_block_column_1_text = (isset($block_1_text_column_block_column_1_text) == 1) ? $block_1_text_column_block_column_1_text : '';
         $text_column_block_column_2_lead_title = (isset($block_1_text_column_block_column_2_lead_title) == 1) ? $block_1_text_column_block_column_2_lead_title : '';
         $text_column_block_column_2_text = (isset($block_1_text_column_block_column_2_text) == 1) ? $block_1_text_column_block_column_2_text : '';
-        include '../blocks/text_column_block.php';
+        include '../../blocks/text_column_block.php';
 
         $block_ID = 1;
         $polaroid_background_color = (isset($block_1_polaroid_background_color) == 1) ? $block_1_polaroid_background_color : '';
@@ -100,21 +76,16 @@ $page_subtitle = (isset($page_subtitle) == 1) ? $page_subtitle : '';
         $polaroid_text1 = (isset($block_1_polaroid_text1) == 1) ? $block_1_polaroid_text1 : '';
         $polaroid_img1 = (isset($block_1_polaroid_img1) == 1) ? $block_1_polaroid_img1 : '';
         $polaroid_link1 = (isset($block_1_polaroid_link1) == 1) ? $block_1_polaroid_link1 : '';
-        $polaroid_button_name1 = (isset($block_1_polaroid_button_name1) == 1) ? $block_1_polaroid_button_name2 : '';
+        $polaroid_button_name1 = (isset($block_1_polaroid_button_name1) == 1) ? $block_1_polaroid_button_name1 : '';
         $polaroid_title2 = (isset($block_1_polaroid_title2) == 1) ? $block_1_polaroid_title2 : '';
         $polaroid_text2 = (isset($block_1_polaroid_text2) == 1) ? $block_1_polaroid_text2 : '';
         $polaroid_img2 = (isset($block_1_polaroid_img2) == 1) ? $block_1_polaroid_img2 : '';
         $polaroid_link2 = (isset($block_1_polaroid_link2) == 1) ? $block_1_polaroid_link2 : '';
         $polaroid_button_name2 = (isset($block_1_polaroid_button_name2) == 1) ? $block_1_polaroid_button_name2 : '';
-        include '../blocks/polaroid_block.php';
+        include '../../blocks/polaroid_block.php';
     ?>
 
     <input type="submit" value="save">
 
 </form>
 </div>
-
-
-<?php 
-include '../admin-footer.php';
-?>

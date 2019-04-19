@@ -40,14 +40,14 @@
     left: 0;
     background-color: rgb(75, 113, 128); 
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 55px;
+    padding-top: 6em;
   }
 
   /* The navigation menu links */
     .sidenav a, .dropdown-btn {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     color: #dddddd;
     display: block;
     position: relative;
@@ -91,6 +91,7 @@
     display: none;
     background-color: #262626;
     padding-left: 8px;
+
   }
 
    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -108,6 +109,8 @@
 
 .pull-right {
   padding: 0px;
+  margin: 0px;
+  position: relative;
 }
 
 

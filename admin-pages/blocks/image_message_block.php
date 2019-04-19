@@ -35,7 +35,12 @@
 
     <fieldset>
         <label for="button_colour">Button Colour</label>
-        <input type="text" id="button_colour" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="<?php echo $message_block_button_colour ?>"/>
+        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="lightblue"> Light Blue<br>
+        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="medblue"> Medium Blue<br>
+        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="darkblue"> Dark Blue<br>
+        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="accent"> Accent<br>
+        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="white"> White<br>
+        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="black"> Black<br>
     </fieldset>
 
     <fieldset>

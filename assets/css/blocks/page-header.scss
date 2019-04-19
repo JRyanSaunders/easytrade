@@ -16,11 +16,16 @@
     height: 50%;
     .shape {
         position: absolute;
-        top: 30%;
+        bottom: 2%;
         left: 2%;
-        background: #B03D55;
-        height: 60%;
-        width: 40%;
+        background: $accent-colour-1;
+        height: 200px;
+        width: 420px;
+        @include breakpoint(desktop) {
+            bottom: 14%;
+            height: 180px;
+            width: 450px;
+        }
         &::before {
             content: '';
             position: absolute;
@@ -28,20 +33,49 @@
             height: 0;
             border: 0 solid transparent;
             border-left-width: 0px;
-            border-right-width: 372px;
-            border-bottom: 39px solid #B03D55;
-            top: -39px;
+            border-right-width: 420px;
+            border-bottom: 39px solid $accent-colour-1;
+            top: -38px;
+            @include breakpoint(desktop) {
+                border-right-width: 450px;
+            }
         }
         &::after {
             content: '';
             position: absolute;
             width: 0;
+            top: 0;
             height: 0;
             border: 0 solid transparent;
-            border-top-width: 5px;
-            border-bottom-width: 193px;
-            border-left: 39px solid #B03D55;
-            right: -39px;
+            border-top-width: 4px;
+            border-bottom-width: 196px;
+            border-left: 39px solid $accent-colour-1;
+            right: -38px;
+            @include breakpoint(desktop) {
+                border-bottom-width: 176px;
+            }
+        }
+        .content {
+            padding: 20px 25px;
+            h1 {
+                color: #FFF;
+                margin-bottom: 10px;
+            }
+            h3, p {
+                color: #FFF;
+            }
+        }
+        &.blog {
+            background: $primary-colour-light;
+            &::before {
+                border-bottom: 39px solid $primary-colour-light;
+            }
+            &::after {
+                border-left: 39px solid $primary-colour-light;
+            }
+            .content {
+                padding-top: 5px;
+            }
         }
     }
 }

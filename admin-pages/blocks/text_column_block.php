@@ -12,23 +12,23 @@
 
     <fieldset>
         <label for="lead_title1">Lead Title 1</label>
-        <input type="text" id="lead_Title1" name="block_<?php echo $block_ID ?>_column_lead_Title1" value="<?php echo $column_lead_Title1 ?>"/>
+        <input type="text" id="lead_Title1" name="block_<?php echo $block_ID ?>_text_column_block_column_1_lead_title" value="<?php echo $text_column_block_column_1_lead_title ?>"/>
     </fieldset>
 
     <fieldset>
         <label for="text1">Text 1</label>
-        <input type="text" id="text1" name="block_<?php echo $block_ID ?>_column_text1" value="<?php echo $column_text1 ?>"/>
+        <input type="text" id="text1" name="block_<?php echo $block_ID ?>_text_column_block_column_1_text" value="<?php echo $text_column_block_column_1_text ?>"/>
     </fieldset>
 
     <!-- text block 2 -->
 
     <fieldset>
         <label for="lead_title2">Lead Title 2</label>
-        <input type="text" id="lead_Title2" name="block_<?php echo $block_ID ?>_column_lead_Title2" value="<?php echo $column_lead_Title2 ?>"/>
+        <input type="text" id="lead_Title2" name="block_<?php echo $block_ID ?>_text_column_block_column_2_lead_title" value="<?php echo $text_column_block_column_2_lead_title ?>"/>
     </fieldset>
 
     <fieldset>
         <label for="text2">Text 2</label>
-        <input type="text" id="text2" name="block_<?php echo $block_ID ?>_column_text2" value="<?php echo $column_text2 ?>"/>
+        <input type="text" id="text2" name="block_<?php echo $block_ID ?>_text_column_block_column_2_text" value="<?php echo $text_column_block_column_2_text ?>"/>
     </fieldset>
 </div>

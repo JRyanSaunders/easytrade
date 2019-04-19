@@ -14,7 +14,7 @@
 
     <fieldset>
         <label for="rating1">Rating 1</label>
-        <input type="text" id="rating1" name="block_<?php echo $block_ID ?>_rating_block_rating1" value="<?php echo $rating_block_rating1 ?>"/>
+        <input type="number" id="rating1" min="1" max="5" name="block_<?php echo $block_ID ?>_rating_block_rating1" value="<?php echo $rating_block_rating1 ?>"/>
     </fieldset> 
 
     <fieldset>
@@ -24,7 +24,10 @@
 
     <fieldset>
         <label for="review_type1">Review type 1</label>
-        <input type="text" id="review_type1" name="block_<?php echo $block_ID ?>_rating_block_review_type1" value="<?php echo $rating_block_review_type1 ?>"/>
+        <select id="review_type1" name="block_<?php echo $block_ID ?>_rating_block_review_type1" value="<?php echo $rating_block_review_type1 ?>">
+            <option value="customer">Customer</option>
+            <option value="tradesman">Tradesman</option>
+        </select>
     </fieldset> 
 
     <!-- Review 2 -->
@@ -35,7 +38,7 @@
 
     <fieldset>
         <label for="rating2">Rating 2</label>
-        <input type="text" id="rating2" name="block_<?php echo $block_ID ?>_rating_block_rating2" value="<?php echo $rating_block_rating2 ?>"/>
+        <input type="number" id="rating2" min="1" max="5" name="block_<?php echo $block_ID ?>_rating_block_rating2" value="<?php echo $rating_block_rating2 ?>"/>
     </fieldset> 
 
     <fieldset>
@@ -45,7 +48,10 @@
 
     <fieldset>
         <label for="review_type2">Review type 2</label>
-        <input type="text" id="review_type2" name="block_<?php echo $block_ID ?>_rating_block_review_type2" value="<?php echo $rating_block_review_type2 ?>"/>
+        <select id="review_type2" name="block_<?php echo $block_ID ?>_rating_block_review_type2" value="<?php echo $rating_block_review_type2 ?>">
+            <option value="customer">Customer</option>
+            <option value="tradesman">Tradesman</option>
+        </select>
     </fieldset> 
 
     <!-- Review 3 -->
@@ -56,7 +62,7 @@
 
     <fieldset>
         <label for="rating3">Rating 3</label>
-        <input type="text" id="rating3" name="block_<?php echo $block_ID ?>_rating_block_rating3" value="<?php echo $rating_block_rating3 ?>"/>
+        <input type="number" id="rating3" min="1" max="5" name="block_<?php echo $block_ID ?>_rating_block_rating3" value="<?php echo $rating_block_rating3 ?>"/>
     </fieldset> 
 
     <fieldset>
@@ -66,7 +72,10 @@
 
     <fieldset>
         <label for="review_type3">Review type 3</label>
-        <input type="text" id="review_type3" name="block_<?php echo $block_ID ?>_rating_block_review_type3" value="<?php echo $rating_block_review_type3 ?>"/>
+        <select id="review_type3" name="block_<?php echo $block_ID ?>_rating_block_review_type3" value="<?php echo $rating_block_review_type3 ?>">
+            <option value="customer">Customer</option>
+            <option value="tradesman">Tradesman</option>
+        </select>
     </fieldset> 
 
 </div>
