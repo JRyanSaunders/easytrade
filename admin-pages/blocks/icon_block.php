@@ -4,7 +4,7 @@
     <!-- Main Information -->
     <fieldset>
         <label for="lead_title">Lead Title</label>
-        <input type="text" id="lead_title" name="block_<?php echo $block_ID ?>_icon_block_1_lead_title" value="<?php echo $icon_block_1_lead_title ?>"/>
+        <input type="text" id="lead_title" name="block_<?php echo $block_ID ?>_icon_block_1_lead_title" value="<?php echo $icon_block_1_lead_title ?>"/>	
     </fieldset>
 
     <fieldset>

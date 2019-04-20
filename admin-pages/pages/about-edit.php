@@ -1,4 +1,5 @@
 <?php
+$template_name = 'admin';
 include '../admin-header.php';
 
 $page_ID = 3; // Got this from the database

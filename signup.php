@@ -130,11 +130,11 @@ if ($_POST)
         <input type="submit" value="Signup">
     </fieldset>
 
+    </form>
 
 
 
 
-
-<?php 
-include 'template-blocks/footer.php';
+    <?php 
+include 'footer.php';
 ?>

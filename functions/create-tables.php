@@ -81,28 +81,29 @@ class EasyTrade_Create_Tables
 
     }
 
-    public function create_blocks_table() {
+    public function create_entry_table() {
 
         $table_name = 'entry';
 
         $table_fields = '
             ID int(11) AUTO_INCREMENT,
-            NAME varchar(255) NOT NULL,
+            ENTRY_DATE DATE NOT NULL,
+            FORM_NAME varchar(255) NOT NULL,
             PRIMARY KEY  (ID)';
 
         $new_table = EasyTrade_Database::create_database_table($table_name, $table_fields);
 
     }
 
-    public function create_blocks_meta_table() {
+    public function create_entry_meta_table() {
 
         $table_name = 'entry_meta';
 
         $table_fields = '
             ID int(11) AUTO_INCREMENT,
-            BLOCKID varchar(255) NOT NULL,
-            BLOCK_FIELD_NAME varchar(255) NOT NULL,
-            DATA_TYPE varchar(255) NOT NULL,
+            ENTRYID varchar(255) NOT NULL,
+            METAKEY varchar(255) NOT NULL,
+            METAVALUE varchar(255) NOT NULL,
             PRIMARY KEY  (ID)';
 
         $new_table = EasyTrade_Database::create_database_table($table_name, $table_fields);

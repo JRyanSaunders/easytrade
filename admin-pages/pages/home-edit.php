@@ -23,6 +23,13 @@ if ($_POST) {
         EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
     }
 
+    $parallax = $_POST['parallax'];
+    if (!empty($parallax)) {
+        $column_to_update = 'METAVALUE="' . $parallax . '"';
+        $row_to_update = $page_finder . '"parallax")';
+        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
+    }
+
     $block_ID = 1;
     include '../block-validation/polaroid_block_submit.php';
 
@@ -49,7 +56,7 @@ if ($get_page_meta->num_rows>0) {
 }
 
 $page_subtitle = (isset($page_subtitle) == 1) ? $page_subtitle : '';
-
+$parallax = (isset($parallax) == 1) ? $parallax : '';
 ?>
 <div class="admin-page">
     <form method="post">
@@ -58,7 +65,7 @@ $page_subtitle = (isset($page_subtitle) == 1) ? $page_subtitle : '';
         <h2>Core Page Information</h2>
         <fieldset>
             <label for="parallax">Parallax</label>
-            <input type="text" id="parallax" name="parallax"/>
+            <input type="text" id="parallax" name="parallax" value="<?php echo $parallax ?>"/>
         </fieldset> 
 
         <fieldset>

@@ -4,10 +4,13 @@
     <!-- Main Information -->
 
     <fieldset>
+        <?php
+        $selected_left = ($message_block_image_position == 'left') ? 'selected' : false;
+        $selected_right = ($message_block_image_position == 'right') ? 'selected' : false; ?>
         <label for="image_position">Image Position</label>
-        <select id="image_position" name="block_<?php echo $block_ID ?>_message_block_image_position" value="<?php echo $message_block_image_position ?>">
-            <option value="left">Left</option>
-            <option value="right">Right</option>
+        <select id="image_position" name="block_<?php echo $block_ID ?>_message_block_image_position">
+            <option <?php echo $selected_left ?> value="left">Left</option>
+            <option <?php echo $selected_right ?> value="right">Right</option>
         </select>
     </fieldset>
 
@@ -34,13 +37,20 @@
     </fieldset>
 
     <fieldset>
+        <?php
+        $selected_lightblue = ($message_block_button_colour == 'lightblue') ? 'checked' : false;
+        $selected_medblue = ($message_block_button_colour == 'medblue') ? 'checked' : false;
+        $selected_darkblue = ($message_block_button_colour == 'darkblue') ? 'checked' : false;
+        $selected_accent = ($message_block_button_colour == 'accent') ? 'checked' : false;
+        $selected_white = ($message_block_button_colour == 'white') ? 'checked' : false;
+        $selected_black = ($message_block_button_colour == 'black') ? 'checked' : false; ?>
         <label for="button_colour">Button Colour</label>
-        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="lightblue"> Light Blue<br>
-        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="medblue"> Medium Blue<br>
-        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="darkblue"> Dark Blue<br>
-        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="accent"> Accent<br>
-        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="white"> White<br>
-        <input type="radio" name="block_<?php echo $block_ID ?>_message_block_button_colour" value="black"> Black<br>
+            <input type="radio" <?php echo $selected_lightblue ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="lightblue"> Light Blue<br>
+            <input type="radio" <?php echo $selected_medblue ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="medblue"> Medium Blue<br>
+            <input type="radio" <?php echo $selected_darkblue ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="darkblue"> Dark Blue<br>
+            <input type="radio" <?php echo $selected_accent ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="accent"> Accent<br>
+            <input type="radio" <?php echo $selected_white ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="white"> White<br>
+            <input type="radio" <?php echo $selected_black ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="black"> Black<br>
     </fieldset>
 
     <fieldset>

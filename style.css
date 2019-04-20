@@ -374,28 +374,29 @@ html {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\000031}}
 form {
   width: 75%;
-  position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\000034}}
+  position: relative;
+  padding-left: 1em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\000035}}
   form div {
     border: 1px solid #ddd;
     padding: 20px 30px;
     box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.2);
     margin: 30px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\0000310}}
     form div h2 {
       font-size: 30px;
       padding-bottom: 10px;
       border-bottom: 1px solid #ddd;
       margin-bottom: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\0000316}}
     form div fieldset {
       margin: 10px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\0000318}}
       form div fieldset label {
         font-family: "Raleway";
         text-transform: uppercase;
         width: 40%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/base\/form\.scss}line{font-family:\0000325}}
   form input[type=submit] {
     position: absolute;
     right: -25%;
@@ -567,7 +568,7 @@ form {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/AMPPS\/www\/easytrade\/assets\/css\/blocks\/parallax\.scss}line{font-family:\000031}}
 .parallax {
-  background-image: url("/easytrade/assets/img/paint1.jpg");
+  background-image: url("/easytrade/assets/img/woman-painting.jpg");
   height: 100%;
   background-attachment: fixed;
   background-position: center;

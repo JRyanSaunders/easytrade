@@ -17,10 +17,12 @@
 
     <?php 
     if ($template_name == 'blog-post') { ?>
-      <link rel="stylesheet" type="text/css" href="../../../style.css">
+        <link rel="stylesheet" type="text/css" href="../../../style.css">
     <?php }
-    else { ?>
-      <link rel="stylesheet" type="text/css" href="../../style.css">
+    else if ($template_name == 'forms') { ?>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    <?php } else { ?>
+        <link rel="stylesheet" type="text/css" href="../../style.css">
     <?php } ?>
 
 
@@ -29,21 +31,20 @@
 if ($template_name == 'blog-post') {
   include '../../../functions.php';
 }
+else if ($template_name == 'forms') {
+  include '../functions.php';
+}
 else {
-  include '../../functions.php';
-} ?>
-
-<?php   //include '../../functions/database-functions.php';
-//include '../../functions/create-tables.php';
-         ?>
+    include '../../functions.php';
+  } ?>
 <header class="admin-header">
 
   <div class="admin-navbar">
-    <a href="../../../home.php">HOME</a>
-    <a href="../../../about.php">ABOUT</a>
-    <a href="../../../professional_advice.php">PROFESSIONAL ADVICE</a>
-    <a href="../../../reviews.php">REVIEWS</a>
-    <a href="../../../contact.php">CONTACT</a>
+    <a href="../../home.php">HOME</a>
+    <a href="../../about.php">ABOUT</a>
+    <a href="../../professional_advice.php">PROFESSIONAL ADVICE</a>
+    <a href="../../reviews.php">REVIEWS</a>
+    <a href="../../contact.php">CONTACT</a>
       <div class="navbar navbar-right">
       <a href="#">Welcome back Admin</a>
       <a href="#" class="pull-right"><img src="/easytrade/assets/img/profile.svg"></a> 

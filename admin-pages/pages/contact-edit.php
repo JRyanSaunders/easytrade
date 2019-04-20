@@ -35,7 +35,7 @@ if ($get_page_meta->num_rows>0) {
 }
 ?>
     
-<div class="contact-page">
+<div class="admin-page">
     <form method="post">
     <?php include '../blocks/page_header.php'; ?>
 

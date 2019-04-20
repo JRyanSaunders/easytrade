@@ -9,14 +9,16 @@ if (isset($_POST['logout_trigger'])) {
   $_SESSION['username'] = false;
   $_SESSION['user_role'] = false;
   $_SESSION['user_ID'] = false;
-} 
-if ($_SESSION['loggedin'] == true) {
-  $loggedin = true;
-  $user_role = $_SESSION['user_role'];
-  $user_ID = $_SESSION['user_ID'];
-}  
-
+}
+if (isset($_SESSION['loggedin'])) {
+  if ($_SESSION['loggedin'] == true) {
+    $loggedin = true;
+    $user_role = $_SESSION['user_role'];
+    $user_ID = $_SESSION['user_ID'];
+  }
+}
 ?>
+
 <html lang="en" loggedin="<?php echo $loggedin ?>" userrole="<?php echo $user_role ?>">
 <head>
     <meta charset="utf-8">

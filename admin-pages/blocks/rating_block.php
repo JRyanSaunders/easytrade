@@ -23,10 +23,13 @@
     </fieldset> 
 
     <fieldset>
+        <?php
+        $selected_left = ($message_block_image_position == 'left') ? 'selected' : false;
+        $selected_right = ($message_block_image_position == 'right') ? 'selected' : false; ?>
         <label for="review_type1">Review type 1</label>
-        <select id="review_type1" name="block_<?php echo $block_ID ?>_rating_block_review_type1" value="<?php echo $rating_block_review_type1 ?>">
-            <option value="customer">Customer</option>
-            <option value="tradesman">Tradesman</option>
+        <select id="review_type1" name="block_<?php echo $block_ID ?>_rating_block_review_type1">
+            <option <?php echo $customer ?> value="customer">Customer</option>
+            <option <?php echo $tradesman ?> value="tradesman">Tradesman</option>
         </select>
     </fieldset> 
 
@@ -47,10 +50,13 @@
     </fieldset> 
 
     <fieldset>
+        <?php
+        $selected_left = ($message_block_image_position == 'left') ? 'selected' : false;
+        $selected_right = ($message_block_image_position == 'right') ? 'selected' : false; ?>
         <label for="review_type2">Review type 2</label>
-        <select id="review_type2" name="block_<?php echo $block_ID ?>_rating_block_review_type2" value="<?php echo $rating_block_review_type2 ?>">
-            <option value="customer">Customer</option>
-            <option value="tradesman">Tradesman</option>
+        <select id="review_type2" name="block_<?php echo $block_ID ?>_rating_block_review_type2">
+            <option <?php echo $customer ?> value="customer">Customer</option>
+            <option <?php echo $tradesman ?> value="tradesman">Tradesman</option>
         </select>
     </fieldset> 
 
@@ -71,10 +77,13 @@
     </fieldset> 
 
     <fieldset>
+        <?php
+        $selected_left = ($message_block_image_position == 'left') ? 'selected' : false;
+        $selected_right = ($message_block_image_position == 'right') ? 'selected' : false; ?>
         <label for="review_type3">Review type 3</label>
-        <select id="review_type3" name="block_<?php echo $block_ID ?>_rating_block_review_type3" value="<?php echo $rating_block_review_type3 ?>">
-            <option value="customer">Customer</option>
-            <option value="tradesman">Tradesman</option>
+        <select id="review_type3" name="block_<?php echo $block_ID ?>_rating_block_review_type3">
+            <option <?php echo $customer ?> value="customer">Customer</option>
+            <option <?php echo $tradesman ?> value="tradesman">Tradesman</option>
         </select>
     </fieldset> 
 

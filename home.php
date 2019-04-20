@@ -23,7 +23,7 @@ if ($all_page_data->num_rows > 0) {
 
 ?>
 
-<div class="parallax">
+<div class="parallax" style="background-image: <?php echo "url('/easytrade/assets/img/" . $parallax . "');"?>">
     <h1><?php echo $page_title ?></h1>
     <h2><?php echo $page_subtitle ?></h2>
     <input type="text" placeholder="Search" class="homesearch">
