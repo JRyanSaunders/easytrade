@@ -33,7 +33,7 @@ if ($rating >= 5) {
             <img class="img-responsive icon" src="/easytrade/assets/img/star.svg" alt="star" style="<?php echo $opacity_4 ?>"/>
             <img class="img-responsive icon" src="/easytrade/assets/img/star.svg" alt="star" style="<?php echo $opacity_5 ?>"/>
         </div>
-        <p class="large-text"><?php echo $review; ?></p>
-        <h3><?php echo $review_type; ?></h3>
+        <p class="large-text"><?php echo $review ?></p>
+        <h3><?php echo $review_name ?></h3>
     </div>
 </div>

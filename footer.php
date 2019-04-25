@@ -12,11 +12,11 @@
           <div class="col-xs-12 col-md-6">
             <h6>Quick Links</h6>
             <ul class="footer-links">
-              <li><a href="home.php">Home</a></li>
-              <li><a href="about.php">About Us</a></li>
-              <li><a href="professional_advice.php">Professional Advice</a></li>
-              <li><a href="reviews.php">Reviews</a></li>
-              <li><a href="contact.php">Contact Us</a></li>
+              <li><a href="<?php echo EasyTrade_Home_URL . 'home.php' ?>">Home</a></li>
+              <li><a href="<?php echo EasyTrade_Home_URL . 'about.php' ?>">About Us</a></li>
+              <li><a href="<?php echo EasyTrade_Home_URL . 'professional_advice.php' ?>">Professional Advice</a></li>
+              <li><a href="<?php echo EasyTrade_Home_URL . 'reviews.php' ?>">Reviews</a></li>
+              <li><a href="<?php echo EasyTrade_Home_URL . 'contact.php' ?>">Contact Us</a></li>
             </ul>
           </div>
         </div>

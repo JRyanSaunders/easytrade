@@ -96,42 +96,20 @@ if (isset($_POST)) {
 
     }
     else if ($_POST['form_name'] == 'previous-work') {
-        // previous work
 
-
-        //validate
-
-        /*$block_border_color_1 = $_POST['block_border_color_1'];
-        if (!empty($block_border_color_1)) {
-            $column_to_update = 'METAVALUE="' . $block_border_color_1 . '"';
-            $row_to_update = $page_finder . '"block_border_color_1")';
-            EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-        }
-
+        $block_border_color_1 = $_POST['block_border_color_1'];
         $example_image_1 = $_POST['example_image_1'];
-        if (!empty($example_image_1)) {
-            $column_to_update = 'METAVALUE="' . $example_image_1 . '"';
-            $row_to_update = $page_finder . '"example_image_1")';
-            EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-        }
-
         $example_title_1 = $_POST['example_title_1'];
-        if (!empty($example_title_1)) {
-            $column_to_update = 'METAVALUE="' . $example_title_1 . '"';
-            $row_to_update = $page_finder . '"example_title_1")';
-            EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
+        $example_desc_1 = $_POST['example_desc_1'];
+
+        if ((!empty($block_border_color_1)) && (!empty($example_image_1)) && (!empty($example_title_1)) && (!empty($example_desc_1))) {
+
+            $value = $block_border_color_1 . '__' . $example_image_1 . '__' . $example_title_1 . '__' . $example_desc_1;
+            $data = "'" . $page_ID . "','previous_work', '" . $value . "'";
+            EasyTrade_Database::insert_into_table('tradesman_page_meta', 'PAGEID, METAKEY, METAVALUE', $data);
         }
 
-        $example_desc_1 = $_POST['example_desc_1'];
-        if (!empty($example_desc_1)) {
-            $column_to_update = 'METAVALUE="' . $example_desc_1 . '"';
-            $row_to_update = $page_finder . '"example_desc_1")';
-            EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
-        }*/
-
-        //update database
-
-    } 
+    }
 }
 
 ?>
@@ -150,67 +128,67 @@ if (isset($_POST)) {
         <div id="profile" class="tab-pane fade in active">
             <!-- about company, call to action, image for the front etc -->
             <form method="post">
+                <div>
+                    <input type="hidden" name="form_name" value="my-profile">
+                    <h2> Your Profile </h2>
 
-                <input type="hidden" name="form_name" value="my-profile">
-                <h2> Your Profile </h2>
+                    <fieldset>
+                        <?php $profile_example_image = (isset($profile_example_image) == 1) ? $profile_example_image : ''; ?>
+                        <label for="profile_example_image">Profile Example Image:</label>
+                        <input type="text" id="profile_example_image" name="profile_example_image" value="<?php echo $profile_example_image ?>"/>
+                    </fieldset>
 
-                <fieldset>
-                    <?php $profile_example_image = (isset($profile_example_image) == 1) ? $profile_example_image : ''; ?>
-                    <label for="profile_example_image">Profile Example Image:</label>
-                    <input type="text" id="profile_example_image" name="profile_example_image" value="<?php echo $profile_example_image ?>"/>
-                </fieldset>
+                    <fieldset>
+                        <?php $calltoaction_title = (isset($calltoaction_title) == 1) ? $calltoaction_title : ''; ?>
+                        <label for="calltoaction_title">Call-To-Action Title:</label>
+                        <input type="text" id="calltoaction_title" name="calltoaction_title" value="<?php echo $calltoaction_title ?>"/>
+                    </fieldset>
 
-                <fieldset>
-                    <?php $calltoaction_title = (isset($calltoaction_title) == 1) ? $calltoaction_title : ''; ?>
-                    <label for="calltoaction_title">Call-To-Action Title:</label>
-                    <input type="text" id="calltoaction_title" name="calltoaction_title" value="<?php echo $calltoaction_title ?>"/>
-                </fieldset>
+                    <fieldset>
+                        <?php $calltoaction_image = (isset($calltoaction_image) == 1) ? $calltoaction_image : ''; ?>
+                        <label for="calltoaction_image">Call-To-Action Image:</label>
+                        <input type="text" id="calltoaction_image" name="calltoaction_image" value="<?php echo $calltoaction_image ?>"/>
+                    </fieldset>
 
-                <fieldset>
-                    <?php $calltoaction_image = (isset($calltoaction_image) == 1) ? $calltoaction_image : ''; ?>
-                    <label for="calltoaction_image">Call-To-Action Image:</label>
-                    <input type="text" id="calltoaction_image" name="calltoaction_image" value="<?php echo $calltoaction_image ?>"/>
-                </fieldset>
+                    <fieldset>
+                        <?php $company_about = (isset($company_about) == 1) ? $company_about : ''; ?>
+                        <label for="company_about">About The Company:</label>
+                        <textarea id="company_about" name="company_about"><?php echo $company_about ?></textarea>
+                    </fieldset>
 
-                <fieldset>
-                    <?php $company_about = (isset($company_about) == 1) ? $company_about : ''; ?>
-                    <label for="company_about">About The Company:</label>
-                    <textarea id="company_about" name="company_about"><?php echo $company_about ?></textarea>
-                </fieldset>
+                    <fieldset>
+                        <?php $social_media_facebook = (isset($social_media_facebook) == 1) ? $social_media_facebook : ''; ?>
+                        <label for="social_media_facebook">Facebook Link:</label>
+                        <input type="text" id="social_media_facebook" name="social_media_facebook" value="<?php echo $social_media_facebook ?>"/>
+                    </fieldset>
 
-                <fieldset>
-                    <?php $social_media_facebook = (isset($social_media_facebook) == 1) ? $social_media_facebook : ''; ?>
-                    <label for="social_media_facebook">Facebook Link:</label>
-                    <input type="text" id="social_media_facebook" name="social_media_facebook" value="<?php echo $social_media_facebook ?>"/>
-                </fieldset>
+                    <fieldset>
+                        <?php $social_media_twitter = (isset($social_media_twitter) == 1) ? $social_media_twitter : ''; ?>
+                        <label for="social_media_twitter">Twitter Link:</label>
+                        <input type="text" id="social_media_twitter" name="social_media_twitter" value="<?php echo $social_media_twitter ?>"/>
+                    </fieldset>
 
-                <fieldset>
-                    <?php $social_media_twitter = (isset($social_media_twitter) == 1) ? $social_media_twitter : ''; ?>
-                    <label for="social_media_twitter">Twitter Link:</label>
-                    <input type="text" id="social_media_twitter" name="social_media_twitter" value="<?php echo $social_media_twitter ?>"/>
-                </fieldset>
+                    <fieldset>
+                        <?php $social_media_google = (isset($social_media_google) == 1) ? $social_media_google : ''; ?>
+                        <label for="social_media_google">Google Link:</label>
+                        <input type="text" id="social_media_google" name="social_media_google" value="<?php echo $social_media_google ?>"/>
+                    </fieldset>
 
-                <fieldset>
-                    <?php $social_media_google = (isset($social_media_google) == 1) ? $social_media_google : ''; ?>
-                    <label for="social_media_google">Google Link:</label>
-                    <input type="text" id="social_media_google" name="social_media_google" value="<?php echo $social_media_google ?>"/>
-                </fieldset>
+                    <fieldset>
+                        <?php $social_media_linkedin = (isset($social_media_linkedin) == 1) ? $social_media_linkedin : ''; ?>
+                        <label for="social_media_linkedin">LinkedIn Link:</label>
+                        <input type="text" id="social_media_linkedin" name="social_media_linkedin" value="<?php echo $social_media_linkedin ?>"/>
+                    </fieldset>
 
-                <fieldset>
-                    <?php $social_media_linkedin = (isset($social_media_linkedin) == 1) ? $social_media_linkedin : ''; ?>
-                    <label for="social_media_linkedin">LinkedIn Link:</label>
-                    <input type="text" id="social_media_linkedin" name="social_media_linkedin" value="<?php echo $social_media_linkedin ?>"/>
-                </fieldset>
-
-                <input type="submit" value="save">
-
+                    <input type="submit" value="save">
+                </div>
             </form>
         </div>
 
         <div id="team" class="tab-pane fade">
             <!-- add A team member: image name etc -->
 
-            <?php 
+            <?php
             $get_team_members = EasyTrade_Database::get_from_database("SELECT * FROM `tradesman_page_meta` WHERE `PAGEID`=$page_ID AND `METAKEY`='team_member'");
             if ($get_team_members->num_rows>0) {
                 while($row = $get_team_members->fetch_assoc()) {
@@ -229,63 +207,88 @@ if (isset($_POST)) {
                 }
             } ?>
             <form method="post">
-                <input type="hidden" name="form_name" value="team-member">
+                <div>
+                    <input type="hidden" name="form_name" value="team-member">
 
-                <h2> Your Team </h2>
+                    <h2> Your Team </h2>
 
-                
+                    
 
-                <fieldset>
-                    <?php $team_member_name = (isset($team_member_name) == 1) ? $team_member_name : ''; ?>
-                    <label for="team_member_name">Team Member Name:</label>
-                    <input type="text" id="team_member_name" name="team_member_name" value="<?php echo $team_member_name ?>"/>
-                </fieldset>
+                    <fieldset>
+                        <?php $team_member_name = (isset($team_member_name) == 1) ? $team_member_name : ''; ?>
+                        <label for="team_member_name">Team Member Name:</label>
+                        <input type="text" id="team_member_name" name="team_member_name" value="<?php echo $team_member_name ?>"/>
+                    </fieldset>
 
-                <fieldset>
-                    <?php $team_member_image = (isset($team_member_image) == 1) ? $team_member_image : ''; ?>
-                    <label for="team_member_image">Team Member Image:</label>
-                    <input type="text" id="team_member_image" name="team_member_image" value="<?php echo $team_member_image ?>"/>
-                </fieldset>
+                    <fieldset>
+                        <?php $team_member_image = (isset($team_member_image) == 1) ? $team_member_image : ''; ?>
+                        <label for="team_member_image">Team Member Image:</label>
+                        <input type="text" id="team_member_image" name="team_member_image" value="<?php echo $team_member_image ?>"/>
+                    </fieldset>
 
-                <input type="submit" value="save">
-
+                    <input type="submit" value="save">
+                </div>
             </form>
         </div>
 
         <!-- TAB 2 -->
         <div id="previous" class="tab-pane fade">
             <!-- add A previous work: image title description etc -->
+
+            <?php
+            $get_previous_work = EasyTrade_Database::get_from_database("SELECT * FROM `tradesman_page_meta` WHERE `PAGEID`=$page_ID AND `METAKEY`='previous_work'");
+            if ($get_previous_work->num_rows>0) {
+                while($row = $get_previous_work->fetch_assoc()) {
+                    $previous_work = $row["METAVALUE"];
+                    $split_previous_work_details = explode('__', $previous_work);
+
+                    $block_border_color = $split_previous_work_details[0];
+                    $image = $split_previous_work_details[1];
+                    $title = $split_previous_work_details[2];
+                    $desc = $split_previous_work_details[3];
+
+                    echo "<div class='previous-work'>";
+                        echo "Block Border Colour: " . $block_border_color . "<br>";
+                        echo "Image: " . $image . "<br>";
+                        echo "Title: " . $title . "<br>";
+                        echo "Description: " . $desc . "<br>";
+                        echo "<button>Delete Previous Work</button>";
+                    echo "</div>";
+
+                }
+            } ?>
+
         <form method="post">
+            <div>
+                <input type="hidden" name="form_name" value="previous-work">
+                <h2> Your Previous Work </h2>
 
-            <input type="hidden" name="form_name" value="previous-work">
-            <h2> Your Previous Work </h2>
+                <fieldset>
+                    <?php $block_border_color_1 = (isset($block_border_color_1) == 1) ? $block_border_color_1 : ''; ?>
+                    <label for="block_border_color_1">Block Border Colour 1:</label>
+                    <input type="color" id="block_border_color_1" name="block_border_color_1" value="<?php echo $block_border_color_1 ?>"/>
+                </fieldset>
 
-            <fieldset>
-                <?php $block_border_color_1 = (isset($block_border_color_1) == 1) ? $block_border_color_1 : ''; ?>
-                <label for="block_border_color_1">Block Border Colour 1:</label>
-                <input type="color" id="block_border_color_1" name="block_border_color_1" value="<?php echo $block_border_color_1 ?>"/>
-            </fieldset>
+                <fieldset>
+                    <?php $example_image_1 = (isset($example_image_1) == 1) ? $example_image_1 : ''; ?>
+                    <label for="example_image_1">Example Image 1:</label>
+                    <input type="text" id="example_image_1" name="example_image_1" value="<?php echo $example_image_1 ?>"/>
+                </fieldset>
 
-            <fieldset>
-                <?php $example_image_1 = (isset($example_image_1) == 1) ? $example_image_1 : ''; ?>
-                <label for="example_image_1">Example Image 1:</label>
-                <input type="text" id="example_image_1" name="example_image_1" value="<?php echo $example_image_1 ?>"/>
-            </fieldset>
+                <fieldset>
+                    <?php $example_title_1 = (isset($example_title_1) == 1) ? $example_title_1 : ''; ?>
+                    <label for="example_title_1">Example Title 1:</label>
+                    <input type="text" id="example_title_1" name="example_title_1" value="<?php echo $example_title_1 ?>"/>
+                </fieldset>
 
-            <fieldset>
-                <?php $example_title_1 = (isset($example_title_1) == 1) ? $example_title_1 : ''; ?>
-                <label for="example_title_1">Example Title 1:</label>
-                <input type="text" id="example_title_1" name="example_title_1" value="<?php echo $example_title_1 ?>"/>
-            </fieldset>
+                <fieldset>
+                    <?php $example_desc_1 = (isset($example_desc_1) == 1) ? $example_desc_1 : ''; ?>
+                    <label for="example_desc_1">Example Description 1:</label>
+                    <textarea id="example_desc_1" name="example_desc_1" value="<?php echo $example_desc_1 ?>"></textarea>
+                </fieldset>
 
-            <fieldset>
-                <?php $example_desc_1 = (isset($example_desc_1) == 1) ? $example_desc_1 : ''; ?>
-                <label for="example_desc_1">Example Description 1:</label>
-                <textarea id="example_desc_1" name="example_desc_1" value="<?php echo $example_desc_1 ?>"></textarea>
-            </fieldset>
-
-            <input type="submit" value="save">
-
+                <input type="submit" value="save">
+            </div>
         </form>
         </div>
     </div>

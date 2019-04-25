@@ -69,7 +69,7 @@ else {
     <a href="<?php echo EasyTrade_Home_URL . 'reviews.php' ?>">REVIEWS</a>
     <a href="<?php echo EasyTrade_Home_URL . 'contact.php' ?>">CONTACT</a>
       <div class="navbar navbar-right">
-      <a href="#">Welcome back Admin</a>
+      <a href="#">Welcome back</a>
       <a href="#" class="pull-right"><img src="/easytrade/assets/img/profile.svg"></a>
       </div>
 

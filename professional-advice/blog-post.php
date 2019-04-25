@@ -42,10 +42,10 @@ include '../template-blocks/page-header.php';
 
 <div class="row" style="background-color: <?php echo $block_1_text_block_background_color ?>">
     <?php
-        $lead_title1 = $block_1_text_block_lead_title1;
-        $content1 = $block_1_text_block_text1;
-        $lead_title2 = $block_1_text_block_lead_title2;
-        $content2 = $block_1_text_block_text2;
+        $lead_title1 = $block_1_text_column_block_column_1_lead_title;
+        $content1 = $block_1_text_column_block_column_1_text;
+        $lead_title2 = $block_1_text_column_block_column_2_lead_title;
+        $content2 = $block_1_text_column_block_column_2_text;
         include '../template-blocks/text-column-block.php';
     ?>
 </div>

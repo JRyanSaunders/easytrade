@@ -22,15 +22,6 @@ $page_ID = 15;
 
     </form>
 
-    <div class="square">
-    <h2>Publish</h2>
-    <p>Status: draft</p>
-    <p>visibility: public</p>
-    <p>Published: Dec 16th, 2019</p>
-
-    <button class="btn btn-primary">Find  a tradesman</button>
-    </div>
-
 </div>
 
 <?php 

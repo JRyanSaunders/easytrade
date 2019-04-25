@@ -8,6 +8,7 @@ Version: 1.0
 @import 'base/elements';
 @import 'base/header';
 @import 'base/footer';
+@import 'base/forms';
 @import 'base/layout';
 @import 'base/admin-header';
 @import 'base/core-site-info';
@@ -19,6 +20,7 @@ Version: 1.0
 @import 'templates/pricing';
 @import 'templates/visit';
 @import 'templates/tradesman';
+@import 'templates/admin-base';
 //@import 'templates/leaveareview';
 
 @import 'blocks/page-header';

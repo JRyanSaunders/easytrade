@@ -72,51 +72,53 @@ $all_page_data = EasyTrade_Database::get_from_database("SELECT * FROM page_meta 
 $blog = ($template_name == 'blog-post') ? 'blog' : false;
 include 'template-blocks/page-header.php'; ?>
 
-<div>
-    <form method="post">
-        
-        <input type="hidden" name="form_name" value="contact-form">
-        <div>
-        <fieldset>
-            <label for="user_type">Tell us who you are:</label>
-            <select id="user_type" name="user_type" class="browser-default custom-select mb-3" value="<?php echo $user_type ?>">
-                <option value="" disabled>Choose option</option>
-                <option value="customer">Customer</option>
-                <option value="tradesman">Tradesman</option>
-                <option value="other">Other</option>
-            </select>
-        </fieldset>
+<div class="login-form">
+    <div class="fields">
+        <form method="post">
+            
+            <input type="hidden" name="form_name" value="contact-form">
+            <div>
+            <fieldset>
+                <label for="user_type">Tell us who you are:</label>
+                <select id="user_type" name="user_type" class="browser-default custom-select mb-3" value="<?php echo $user_type ?>">
+                    <option value="" disabled>Choose option</option>
+                    <option value="customer">Customer</option>
+                    <option value="tradesman">Tradesman</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
 
-        <fieldset>
-            <label for="user_enquiry_type">Enquiry type:</label>
-            <select id="user_enquiry_type" name="user_enquiry_type" class="browser-default custom-select mb-3" value="<?php echo $user_enquiry_type ?>">
-                <option value="" disabled>Choose option</option>
-                <option value="customer">General enquiry</option>
-                <option value="tradesman">Joining the website</option>
-                <option value="complaint">Complaint</option>
-                <option value="other">Other</option>
-            </select>
-        </fieldset>
+            <fieldset>
+                <label for="user_enquiry_type">Enquiry type:</label>
+                <select id="user_enquiry_type" name="user_enquiry_type" class="browser-default custom-select mb-3" value="<?php echo $user_enquiry_type ?>">
+                    <option value="" disabled>Choose option</option>
+                    <option value="customer">General enquiry</option>
+                    <option value="tradesman">Joining the website</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
 
-        <fieldset>
-            <label for="user_email">Your email address:</label>
-            <input type="email" id="user_email" name="user_email" class="form-control mb-3" value="<?php echo $user_email ?>">
-        </fieldset>
+            <fieldset>
+                <label for="user_email">Your email address:</label>
+                <input type="email" id="user_email" name="user_email" class="form-control mb-3" value="<?php echo $user_email ?>">
+            </fieldset>
 
-        <fieldset>
-            <label for="user_name">Your name:</label>
-            <input type="text"id="user_name" name="user_name" class="form-control mb-3" value="<?php echo $user_name ?>">
-        </fieldset>
+            <fieldset>
+                <label for="user_name">Your name:</label>
+                <input type="text"id="user_name" name="user_name" class="form-control mb-3" value="<?php echo $user_name ?>">
+            </fieldset>
 
-        <fieldset>
-            <label for="user_comment">Comment:</label>
-            <textarea id="user_comment" name="user_comment" class="form-control mb-3" value="<?php echo $user_comment ?>" data-gramm_editor="false"></textarea>
-        </fieldset>
-        </div>
+            <fieldset>
+                <label for="user_comment">Comment:</label>
+                <textarea id="user_comment" name="user_comment" class="form-control mb-3" value="<?php echo $user_comment ?>" data-gramm_editor="false"></textarea>
+            </fieldset>
+            </div>
 
-        <input type="submit" value="send">
+            <input type="submit" value="send">
 
-    </form>
+        </form>
+    </div>
 </div>
 
 <?php 

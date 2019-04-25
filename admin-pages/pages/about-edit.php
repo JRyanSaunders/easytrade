@@ -4,7 +4,6 @@ include '../admin-header.php';
 
 $page_ID = 3; // Got this from the database 
 
-
 if ($_POST) {
 
     $page_title = $_POST['page_title'];

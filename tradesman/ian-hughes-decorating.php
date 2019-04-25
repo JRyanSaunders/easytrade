@@ -14,6 +14,104 @@ $all_page_data = EasyTrade_Database::get_from_database("SELECT * FROM tradesman_
     }
 }
 
+if (isset($_POST)) {
+
+    if ($_POST['form_name'] == 'enquiry') {
+
+        $errors = 'no';
+        $enquiry_type = $_POST['enquiry_type'];
+        $quote_name = $_POST['quote_name'];
+        $quote_email = $_POST['quote_email'];
+        $quote_comment = $_POST['quote_comment'];
+        $quote_phoneno = $_POST['quote_phoneno'];
+
+        if (empty($quote_name)) {
+            $errors = 'yes';
+            echo "please enter your name";
+        }
+        if (empty($quote_email)) {
+            $errors = 'yes';
+            echo "please enter your email";
+        }
+        if (empty($quote_comment)) {
+            $errors = 'yes';
+            echo "please enter your comment";
+        }
+        if (empty($quote_phoneno)) {
+            $errors = 'yes';
+            echo "please enter your phone number";
+        }
+        if ($errors == 'no') {
+            // add new entry to database
+            $form_name = $_POST['form_name'] . '__' . $page_ID;
+            $form_data = "'" . date('d-m-Y') . "','" . $form_name . "'";
+            $entry_ID = EasyTrade_Database::insert_into_table('entry', 'ENTRY_DATE, FORM_NAME', $form_data);
+
+            // add information to entrymeta
+            $form_data = "'" . $entry_ID . "','enquiry_type','" . $enquiry_type . "'";
+            EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+
+            $form_data = "'" . $entry_ID . "','quote_name','" . $quote_name . "'";
+            EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+
+            $form_data = "'" . $entry_ID . "','quote_email','" . $quote_email . "'";
+            EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+
+            $form_data = "'" . $entry_ID . "','quote_comment','" . $quote_comment . "'";
+            EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+
+            $form_data = "'" . $entry_ID . "','quote_phoneno','" . $quote_phoneno . "'";
+            EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+
+        }
+    }
+    else if ($_POST['form_name'] == 'review') {
+
+        $errors = 'no';
+        $block_colour = $_POST['block_colour'];
+        $rating = $_POST['rating'];
+        $review = $_POST['review'];
+        $review_name = $_POST['review_name'];
+
+        if (empty($block_colour)) {
+            $errors = 'yes';
+            echo "please select a colour";
+        }
+        if (empty($rating)) {
+            $errors = 'yes';
+            echo "please enter a rating";
+        }
+        if (empty($review)) {
+            $errors = 'yes';
+            echo "please enter your review";
+        }
+        if (empty($review_name)) {
+            $errors = 'yes';
+            echo "please enter your name";
+        }
+
+        if ($errors == 'no') {
+            // add new entry to database
+            $form_name = $_POST['form_name'] . '__' . $page_ID;
+            $form_data = "'" . date('d-m-Y') . "','" . $form_name . "'";
+            $entry_ID = EasyTrade_Database::insert_into_table('entry', 'ENTRY_DATE, FORM_NAME', $form_data);
+
+            // add information to entrymeta
+            $form_data = "'" . $entry_ID . "','block_colour','" . $block_colour . "'";
+            EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+
+            $form_data = "'" . $entry_ID . "','rating','" . $rating . "'";
+            EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+
+            $form_data = "'" . $entry_ID . "','review','" . $review . "'";
+            EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+
+            $form_data = "'" . $entry_ID . "','review_name','" . $review_name . "'";
+            EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+
+        }
+    }
+}
 
 // START OF PAGE CONTENT
 ?>
@@ -32,7 +130,7 @@ $all_page_data = EasyTrade_Database::get_from_database("SELECT * FROM tradesman_
 
         <!-- TAB 1 - PROFILE -->
         <div id="profile" class="tab-pane fade in active">
-        
+
             <div class="row" style="margin-right: -15px;">
                 <div class="col-sm-8 box-about">
                     <h3>ABOUT <?php echo $company_name ?></h3>
@@ -92,13 +190,25 @@ $all_page_data = EasyTrade_Database::get_from_database("SELECT * FROM tradesman_
 
             <div class="row">
                 <div class="col-sm-12">
-                    <?php
-                        $image = 'room4.svg';
-                        $title = 'Example 1';
-                        $info = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor pharetra orci. Duis faucibus tristique vehicula. Etiam rhoncus semper odio, mollis porta neque consequat eget.';
-                        include '../tradesman-blocks/previous-work.php'; ?>
+
+                <?php $get_previous_work = EasyTrade_Database::get_from_database("SELECT * FROM `tradesman_page_meta` WHERE `PAGEID`=$page_ID AND `METAKEY`='previous_work'");
+                if ($get_previous_work->num_rows>0) {
+                    while($row = $get_previous_work->fetch_assoc()) {
+                        $previous_work = $row["METAVALUE"];
+                        $split_previous_work_details = explode('__', $previous_work);
+
+                        $block_border_color = $split_previous_work_details[0];
+                        $image = $split_previous_work_details[1];
+                        $title = $split_previous_work_details[2];
+                        $info = $split_previous_work_details[3];
+
+                        include '../tradesman-blocks/previous-work.php';
+
+                    }
+                } ?>
+
                 </div>
-            </div> 
+            </div>
 
             <div class="row">
                 <div class="col-sm-6" style="margin-bottom: 50px;">
@@ -118,17 +228,32 @@ $all_page_data = EasyTrade_Database::get_from_database("SELECT * FROM tradesman_
 
         <!-- // TAB 3 - REVIEWS -->
         <div id="reviews" class="tab-pane fade">
-        
+
             <div class="row">
-                <?php
-                // foreach 'review-block' metavalue 1/2/3/4/5, store as array, foreach loop, get data, get template
-                $rating = 4;
-                $review = 'happy quote';
-                $review_type = 'customer';
-                $block_colour = '#B03D55';
-                include '../tradesman-blocks/review.php'; ?>
+
+            <?php
+            $form_name = 'review__' . $page_ID;
+            $entries = EasyTrade_Database::get_from_database("SELECT * FROM entry WHERE FORM_NAME='" . $form_name . "'");
+            if ($entries->num_rows > 0) {
+                while($column = $entries->fetch_assoc()) {
+                    $entry_ID = $column["ID"];
+                    $entry_meta = EasyTrade_Database::get_from_database("SELECT * FROM entry_meta WHERE ENTRYID='" . $entry_ID . "'");
+                    if ($entry_meta->num_rows > 0) {
+                        while($row = $entry_meta->fetch_assoc()) {
+                            $variable_name = $row["METAKEY"];
+                            $$variable_name = $row["METAVALUE"];
+                        }
+
+                        include '../tradesman-blocks/review.php';
+
+                    }
+
+                }
+            }?>
+
+
             </div>
-            
+
             <!--- BUTTON  --->
             <div class="center" style="margin-bottom: 50px;">
                 <button type="button" class="btn btn et-btn-med" data-toggle="modal" data-target="#myModal">WRITE A REVIEW</button>
@@ -138,10 +263,10 @@ $all_page_data = EasyTrade_Database::get_from_database("SELECT * FROM tradesman_
 
         <!-- // TAB 4 - CONTACT -->
         <div id="contact" class="tab-pane fade">
-            
+
             <h2> QUOTE CONTACT FORM </h2>
             <?php include '../tradesman-blocks/quote-form.php'; ?>
-            
+
         </div>
 
     </div>
@@ -162,27 +287,7 @@ include '../footer.php'; ?>
         <h4 class="modal-title">WRITE A REVIEW</h4>
       </div>
       <div class="modal-body">
-        <form method="post">
-
-        <fieldset>
-                <label for="rating">Rating</label>
-                <input type="number" id="rating" min="1" max="5" name="rating"/>
-        </fieldset> 
-
-        <fieldset>
-            <label for="review">Review:</label>
-            <textarea id="review" name="review"></textarea>
-        </fieldset>
-
-        <fieldset>
-                <label for="review_name">Your Name:</label>
-                <input type="text" id="review_name" name="review_name"/>
-        </fieldset> 
-
-        <input type="submit" value="send">
-
-
-        </form>
+        <?php include '../tradesman-blocks/leave-review.php'; ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

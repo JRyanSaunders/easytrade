@@ -83,7 +83,7 @@ $active = 'class="active"';
               <li <?php if (strpos($_SERVER['REQUEST_URI'], 'reviews.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'reviews.php' ?>"><h3>Reviews</h3></a></li>
               <li <?php if (strpos($_SERVER['REQUEST_URI'], 'contact.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'contact.php' ?>"><h3>Contact</h3></a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right <?php if ($loggedin == true) { echo 'logged-in'; } ?>">
               <?php if ($loggedin == false) { ?>
                 <li <?php if (strpos($_SERVER['REQUEST_URI'], 'login.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'login.php' ?>" class="btn signin"><h3>Log in</h3></a></li>
                 <li <?php if (strpos($_SERVER['REQUEST_URI'], 'signup.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'signup.php' ?>"><h3>Register</h3></a></li>
