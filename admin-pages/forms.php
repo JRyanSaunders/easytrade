@@ -8,11 +8,20 @@ $page_ID = 15;
 <div class="admin-page">
 
 <h1> Entries </h1>
-
+<br>
 <h2>Contact Forms</h2>
-
+<hr>
 <?php 
-$form_type = 'contact-form';
+$form_type = 'contact-form'; ?>
+<div class="row">
+            <div class="col-sm-2"><?php echo "ENTRY ID" ?></div>
+            <div class="col-sm-2"><?php echo "USER NAME" ?></div>
+            <div class="col-sm-2"><?php echo "USER TYPE" ?></div>
+            <div class="col-sm-2"><?php echo "USER ENQUIRY TYPE" ?></div>
+            <div class="col-sm-2"><?php echo "USER EMAIL" ?></div>
+        </div>
+        <?php
+// NEED TO ADD A WAY TO SHOW ITS A 'COMMENT'
 
 // Page Title
 $entries = EasyTrade_Database::get_from_database("SELECT * FROM entry WHERE FORM_NAME='" . $form_type . "'");
@@ -28,6 +37,9 @@ if ($entries->num_rows > 0) {
             }
         }
         ?>
+
+        
+
         <div class="row">
             <div class="col-sm-2"><?php echo $entry_ID ?></div>
             <div class="col-sm-2"><?php echo $user_name ?></div>
@@ -46,6 +58,7 @@ if ($entries->num_rows > 0) {
 
 
 <h2>Reviews</h2>
+<hr>
 
 <?php 
 $form_type = 'review';
@@ -63,21 +76,26 @@ if ($entries->num_rows > 0) {
                 $$variable_name = $row["METAVALUE"];
             }
         }
-    
-        // print on page as a row of information
-        echo "Entry ID: " . $entry_ID . "<br>";
-        echo "Review: " . $review . "<br>";
-        echo "Review type: " . $review_type . "<br>";
-        echo "Rating: " . $rating . "<br>";
+        ?>
 
-        echo "<hr>";
-        
+        <div class="row">
+            <div class="col-sm-4"><?php echo "ENTRY ID" ?></div>
+            <div class="col-sm-4"><?php echo "RATING" ?></div>
+            <div class="col-sm-4"><?php echo "REVIEW TYPE" ?></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4"><?php echo $entry_ID ?></div>
+            <div class="col-sm-4"><?php echo $rating ?></div>
+            <div class="col-sm-4"><?php echo $review_type ?></div>
+        </div>
+        <div class="row"><?php echo $review ?></div>
+        <hr>
+        <?php
     } 
 }
 
-?>
-
-
+?> 
 </div>
 
 <?php 

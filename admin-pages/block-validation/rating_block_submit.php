@@ -11,6 +11,7 @@
         EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
     }
     
+    // RATING 1
     $rating_block_1_block_color_1 = $_POST['block_' . $block_ID .'_rating_block_color1'];
     if (!empty($rating_block_1_block_color_1)) {
         $column_to_update = 'METAVALUE="' . $rating_block_1_block_color_1 . '"';
@@ -39,6 +40,7 @@
         EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
     }
 
+    // RATING 2
     $rating_block_1_block_color2 = $_POST['block_' . $block_ID .'_rating_block_color2'];
     if (!empty($rating_block_1_block_color2)) {
         $column_to_update = 'METAVALUE="' . $rating_block_1_block_color2 . '"';
@@ -67,6 +69,7 @@
         EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
     }
 
+    // RATING 3
     $rating_block_1_block_color3 = $_POST['block_' . $block_ID .'_rating_block_color3'];
     if (!empty($rating_block_1_block_color3)) {
         $column_to_update = 'METAVALUE="' . $rating_block_1_block_color3 . '"';

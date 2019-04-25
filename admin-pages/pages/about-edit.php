@@ -2,7 +2,7 @@
 $template_name = 'admin';
 include '../admin-header.php';
 
-$page_ID = 3; // Got this from the database
+$page_ID = 3; // Got this from the database 
 
 
 if ($_POST) {
@@ -54,8 +54,8 @@ if ($get_page_meta->num_rows>0) {
 
             $block_ID = 1;
             $icon_block_1_lead_title = (isset($block_1_icon_block_1_lead_title) == 1) ? $block_1_icon_block_1_lead_title : '';
-            $icon_block_1_lead_title = (isset($block_1_icon_block_1_main_subtitle) == 1) ? $block_1_icon_block_1_main_subtitle : '';
-            $icon_block_1_lead_title = (isset($block_1_icon_block_1_background_color) == 1) ? $block_1_icon_block_1_background_color : '';
+            $icon_block_1_main_subtitle = (isset($block_1_icon_block_1_main_subtitle) == 1) ? $block_1_icon_block_1_main_subtitle : '';
+            $icon_block_1_background_color   = (isset($block_1_icon_block_1_background_color) == 1) ? $block_1_icon_block_1_background_color : '';
             $icon_1_image = (isset($block_1_icon_1_image) == 1) ? $block_1_icon_1_image : '';
             $icon_1_alt = (isset($block_1_icon_1_alt) == 1) ? $block_1_icon_1_alt : '';
             $icon_1_title = (isset($block_1_icon_1_title) == 1) ? $block_1_icon_1_title : '';
@@ -80,6 +80,7 @@ if ($get_page_meta->num_rows>0) {
             $message_block_lead_title = (isset($block_1_message_block_lead_title) == 1) ? $block_1_message_block_lead_title : '';
             $message_block_content = (isset($block_1_message_block_content) == 1) ? $block_1_message_block_content : '';
             $message_block_button_colour = (isset($block_1_message_block_button_colour) == 1) ? $block_1_message_block_button_colour : '';
+            $message_block_button_label = (isset($block_1_message_block_button_label) == 1) ? $block_1_message_block_button_label : '';
             $message_block_link = (isset($block_1_message_block_link) == 1) ? $block_1_message_block_link : '';
             include '../blocks/image_message_block.php';
 
@@ -91,24 +92,27 @@ if ($get_page_meta->num_rows>0) {
             $message_block_lead_title = (isset($block_2_message_block_lead_title) == 1) ? $block_2_message_block_lead_title : '';
             $message_block_content = (isset($block_2_message_block_content) == 1) ? $block_2_message_block_content : '';
             $message_block_button_colour = (isset($block_2_message_block_button_colour) == 1) ? $block_2_message_block_button_colour : '';
+            $message_block_button_label = (isset($block_2_message_block_button_label) == 1) ? $block_2_message_block_button_label : '';
             $message_block_link = (isset($block_2_message_block_link) == 1) ? $block_2_message_block_link : '';
             include '../blocks/image_message_block.php';
  
             $block_ID = 1;
-            $rating_block_color1 = (isset($block_1_rating_block_color1) == 1) ? $block_1_rating_block_color1 : '';
-            $rating_block_color1 = (isset($block_1_rating_block_color1) == 1) ? $block_1_rating_block_color1 : '';
+            $rating_block_background_color = (isset($block_1_rating_block_background_color)== 1) ? $block_1_rating_block_background_color : '';
 
+            $rating_block_color1 = (isset($block_1_rating_block_color1) == 1) ? $block_1_rating_block_color1 : '';
             $rating_block_rating1 = (isset($block_1_rating_block_rating1) == 1) ? $block_1_rating_block_rating1 : '';
             $rating_block_review1 = (isset($block_1_rating_block_review1) == 1) ? $block_1_rating_block_review1 : '';
             $rating_block_review_type1 = (isset($block_1_rating_block_review_type1) == 1) ? $block_1_rating_block_review_type1 : '';
         
-            $rating_block_rating1 = (isset($block_1_rating_block_rating2) == 1) ? $block_1_rating_block_rating2 : '';
-            $rating_block_review1 = (isset($block_1_rating_block_review2) == 1) ? $block_1_rating_block_review2 : '';
-            $rating_block_review_type1 = (isset($block_1_rating_block_review_type2) == 1) ? $block_1_rating_block_review_type2 : '';
+            $rating_block_color2 = (isset($block_1_rating_block_color2) == 1) ? $block_1_rating_block_color2 : '';
+            $rating_block_rating2 = (isset($block_1_rating_block_rating2) == 1) ? $block_1_rating_block_rating2 : '';
+            $rating_block_review2 = (isset($block_1_rating_block_review2) == 1) ? $block_1_rating_block_review2 : '';
+            $rating_block_review_type2 = (isset($block_1_rating_block_review_type2) == 1) ? $block_1_rating_block_review_type2 : '';
 
-            $rating_block_rating1 = (isset($block_1_rating_block_rating3) == 1) ? $block_1_rating_block_rating3 : '';
-            $rating_block_review1 = (isset($block_1_rating_block_review3) == 1) ? $block_1_rating_block_review3 : '';
-            $rating_block_review_type1 = (isset($block_1_rating_block_review_type3) == 1) ? $block_1_rating_block_review_type3 : '';
+            $rating_block_color3 = (isset($block_1_rating_block_color3) == 1) ? $block_1_rating_block_color3 : '';
+            $rating_block_rating3 = (isset($block_1_rating_block_rating3) == 1) ? $block_1_rating_block_rating3 : '';
+            $rating_block_review3 = (isset($block_1_rating_block_review3) == 1) ? $block_1_rating_block_review3 : '';
+            $rating_block_review_type3 = (isset($block_1_rating_block_review_type3) == 1) ? $block_1_rating_block_review_type3 : '';
             include '../blocks/rating_block.php'; ?>
 
         <input type="submit" value="save">

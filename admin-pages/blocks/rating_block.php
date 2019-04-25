@@ -2,10 +2,12 @@
     <h2>Rating Box <?php echo $block_ID ?></h2>
     <!-- Main Information -->
     <fieldset>
-        <label for="background_color">background color</label>
-        <input type="color" id="background_color" name="block_<?php echo $block_ID ?>_rating_block_background_color" value="<?php echo $rating_block_background_color ?>"/>
+        <label for="background_color">Background color</label>
+        <input type="color" id="background_color" name="block_<?php echo $block_ID ?>_rating_block_background_color" value="<?php echo $block_1_rating_block_background_color ?>"/>
     </fieldset>
 
+    <hr>
+     
     <!-- Review 1 -->
     <fieldset>
         <label for="block_color">Rating Block 1 Color</label>
@@ -24,14 +26,16 @@
 
     <fieldset>
         <?php
-        $selected_left = ($message_block_image_position == 'left') ? 'selected' : false;
-        $selected_right = ($message_block_image_position == 'right') ? 'selected' : false; ?>
+        $selected_customer = ($rating_block_review_type1 == 'customer') ? 'selected' : false;
+        $selected_tradesman = ($rating_block_review_type1 == 'tradesman') ? 'selected' : false; ?>
         <label for="review_type1">Review type 1</label>
         <select id="review_type1" name="block_<?php echo $block_ID ?>_rating_block_review_type1">
-            <option <?php echo $customer ?> value="customer">Customer</option>
-            <option <?php echo $tradesman ?> value="tradesman">Tradesman</option>
+            <option <?php echo $selected_customer ?> value="customer">Customer</option>
+            <option <?php echo $selected_tradesman ?> value="tradesman">Tradesman</option>
         </select>
     </fieldset> 
+
+    <hr>
 
     <!-- Review 2 -->
     <fieldset>
@@ -51,14 +55,16 @@
 
     <fieldset>
         <?php
-        $selected_left = ($message_block_image_position == 'left') ? 'selected' : false;
-        $selected_right = ($message_block_image_position == 'right') ? 'selected' : false; ?>
+        $selected_customer = ($rating_block_review_type2 == 'customer') ? 'selected' : false;
+        $selected_tradesman = ($rating_block_review_type2 == 'tradesman') ? 'selected' : false; ?>
         <label for="review_type2">Review type 2</label>
         <select id="review_type2" name="block_<?php echo $block_ID ?>_rating_block_review_type2">
-            <option <?php echo $customer ?> value="customer">Customer</option>
-            <option <?php echo $tradesman ?> value="tradesman">Tradesman</option>
+            <option <?php echo $selected_customer ?> value="customer">Customer</option>
+            <option <?php echo $selected_tradesman ?> value="tradesman">Tradesman</option>
         </select>
     </fieldset> 
+
+    <hr>
 
     <!-- Review 3 -->
     <fieldset>
@@ -78,12 +84,12 @@
 
     <fieldset>
         <?php
-        $selected_left = ($message_block_image_position == 'left') ? 'selected' : false;
-        $selected_right = ($message_block_image_position == 'right') ? 'selected' : false; ?>
+        $selected_customer = ($rating_block_review_type3 == 'customer') ? 'selected' : false;
+        $selected_tradesman = ($rating_block_review_type3 == 'tradesman') ? 'selected' : false; ?>
         <label for="review_type3">Review type 3</label>
         <select id="review_type3" name="block_<?php echo $block_ID ?>_rating_block_review_type3">
-            <option <?php echo $customer ?> value="customer">Customer</option>
-            <option <?php echo $tradesman ?> value="tradesman">Tradesman</option>
+            <option <?php echo $selected_customer ?> value="customer">Customer</option>
+            <option <?php echo $selected_tradesman ?> value="tradesman">Tradesman</option>
         </select>
     </fieldset> 
 

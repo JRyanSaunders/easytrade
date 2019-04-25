@@ -1,7 +1,9 @@
 <?php
 $template_name = 'core-site-info';
-include 'admin-header.php';
-?>
+include 'admin-header.php'; 
+$page_ID = 15;
+
+ ?>
 <div class="admin-page">
 
 <h1> Core site Info </h1>

@@ -11,7 +11,6 @@ Version: 1.0
 @import 'base/layout';
 @import 'base/admin-header';
 @import 'base/core-site-info';
-@import 'base/form';
 
 @import 'templates/home';
 @import 'templates/about';
@@ -30,6 +29,7 @@ Version: 1.0
 @import 'blocks/text-block';
 @import 'blocks/quote-block';
 @import 'blocks/image-message-block';
+@import 'blocks/tradesman-page';
 
 //@import 'templates/visit';
 //@import 'templates/development';

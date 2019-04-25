@@ -39,6 +39,13 @@
         EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
     }
 
+    $image_message_block_button_label = $_POST['block_' . $block_ID . '_message_block_button_label'];
+    if (!empty($image_message_block_button_label)) {
+        $column_to_update = 'METAVALUE="' . $image_message_block_button_label . '"';
+        $row_to_update = $page_finder . '"block_' . $block_ID . '_message_block_button_label")';
+        EasyTrade_Database::update_database_record($table_to_update, $column_to_update, $row_to_update);
+    }
+
     $image_message_block_button_colour_1 = $_POST['block_' . $block_ID . '_message_block_button_colour'];
     if (!empty($image_message_block_button_colour_1)) {
         $column_to_update = 'METAVALUE="' . $image_message_block_button_colour_1 . '"';

@@ -1,7 +1,7 @@
 <?php
     /*
      *
-     * QUOTE BLOCK 1
+     * QUOTE BLOCK 1,2,3
      *
      */
 

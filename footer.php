@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-sm-12 col-md-6">
             <h6>About</h6>
-            <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            <p class="text-justify">EasyTrade wants to be as simple as possible to help everyday people and high quality professional tradesman to find eachother. Our content management system helps build up tradesmans brand awareness and portray their profile in the way that they want to a customer who is looking for a tradesman. </p>
           </div>
 
           <div class="col-xs-12 col-md-6">
@@ -30,4 +30,6 @@
         </div>
       </div>
     </footer>
+    <script src="<?php echo EasyTrade_Home_URL . 'assets/js/main.js' ?>"></script>
 </html>
+

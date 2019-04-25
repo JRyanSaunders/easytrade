@@ -101,7 +101,7 @@ $parallax = (isset($parallax) == 1) ? $parallax : '';
         include '../blocks/text_block.php';
 
         $block_ID = 1;
-        $quote_block_background_color = (isset($block_1_quote_block_background_color) == 1) ? $quote_block_background_color : '';
+        $quote_block_background_color = (isset($block_1_quote_block_background_color) == 1) ? $block_1_quote_block_background_color : '';
         $quote1 = (isset($block_1_quote1) == 1) ? $block_1_quote1 : '';
         $author1 = (isset($block_1_author1) == 1) ? $block_1_author1 : '';
         $quote2 = (isset($block_1_quote2) == 1) ? $block_1_quote2 : '';

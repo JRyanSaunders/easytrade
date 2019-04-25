@@ -1,52 +1,124 @@
 .navbar-inverse {
     background-color: $primary-colour-dark;
     border: none;
-    .navbar-form {
-        div {
-            padding: 0;
+    .navbar-collapse {
+        position: relative;
+        &[aria-expanded="true"] {
+            @include breakpoint(tablet) {
+                .mainmenu {
+                    display: block;
+                }
+            }
+        }
+        
+        .navbar-form {
+            border: 0;
             box-shadow: none;
-            border: none;
-            margin: auto;
-        }
-        .input-group-btn {
-            button {
-                padding: 9px 12px;
+            margin: 0 auto;
+            @include breakpoint(tablet) {
+                padding: 0;
+                padding-top: 6px;
+                width: 125px;
+            }
+            @include breakpoint (desktop) {
+                width: auto;
+            }
+            div {
+                padding: 0;
+                box-shadow: none;
+                border: none;
+                margin: auto;
+            }
+            .input-group-btn {
+                button {
+                    padding: 9px 12px;
+                }
             }
         }
-    }
-    .navbar-nav {
-        li {
-            a {
-                color: $white;
-                &:hover {
-                    background-color: $grey;
-                    color: black;
-                }
-                &.signin {
-                    @extend .et-btn-white;
-                }
-                h3 {
-                    font-size: 15px;
-                    color: #ffffff;
-                }
+        .tablet-only {
+            display: none;
+            @include breakpoint(tablet) {
+                display: block;
             }
-            &.active {
+            @include breakpoint(desktop) {
+                display: none;
+            }           
+        }
+        .navbar-nav {
+            &.mainmenu {
+                @include breakpoint(tablet) {
+                    display: none;
+                }
+                @include breakpoint(desktop) {
+                    display: block;
+                }  
+            }
+            li {
                 a {
-                    background-color: $primary-colour-dark;
                     color: $white;
+                    &:hover {
+                        background-color: $grey;
+                        color: black;
+                    }
+                    &.signin {
+                        @extend .et-btn-white;
+                        border-radius: 0;
+                    }
+                    h3 {
+                        font-size: 15px;
+                        color: #ffffff;
+                    }
+                    &.icon {
+                        padding: 10px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        img {
+                            height: 30px;
+                        }
+                    }
                 }
-                &:hover 
-                {
-                    background-color: $grey;
-                    color: #fff;
+                &.active {
+                    a {
+                        background-color: $primary-colour-dark;
+                        color: $white;
+                        &:hover 
+                        {
+                            background-color: $grey;
+                            color: #fff;
+                        }              
+                    }
+                }
+            }
+            &.navbar-right {
+                @include breakpoint(tablet) {
+                    position: absolute;
+                    top: 50px;
+                    right: 50px;
+                }
+                @include breakpoint(desktop) {
+                    right: 0;
+                }
+                form.logout_form {
+                    margin-bottom: 0;
+                    width: auto;
+                    text-align: right;
+                    padding-right: 45px;
+                    margin-top: -50px;
+                    @include breakpoint(tablet) {
+                        //
+                    }
+                    input[type="submit"] {
+                        position: relative;
+                        right: auto;
+                        font-size: 15px;
+                        padding: 6px 10px;
+                        margin: 9px;
+                        background: none;
+                    }
                 }
             }
         }
-        .settings {
-            height: 40px;
-            padding: 3%;
-            color: $white;
-        }
     }
-
+    
 }

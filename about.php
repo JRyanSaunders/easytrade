@@ -63,7 +63,8 @@ include 'template-blocks/page-header.php';
     $image_alt_text = $block_1_message_block_alt_text;
     $title = $block_1_message_block_lead_title;
     $content = $block_1_message_block_content;
-    $button_title = $block_1_message_block_button_colour;
+    $button_title = $block_1_message_block_button_label;
+    $button_colour = $block_1_message_block_button_colour;
     include 'template-blocks/image-message-block.php';
 ?>
 <!--- END OF IMAGE MESSAGE BLOCK --->
@@ -75,31 +76,32 @@ include 'template-blocks/page-header.php';
     $image_alt_text = $block_2_message_block_alt_text;
     $title = $block_2_message_block_lead_title;
     $content = $block_2_message_block_content;
-    $button_title = $block_2_message_block_button_colour;
+    $button_title = $block_2_message_block_button_label;
+    $button_colour = $block_2_message_block_button_colour;
     include 'template-blocks/image-message-block.php';
 ?>
 <!--- END OF IMAGE MESSAGE BLOCK --->
 
 <!--- RATING BLOCK --->
-<div class="row rating-block" style="background-color: <?php echo $block_1_rating_block_background_color_1 ?>">
+<div class="row rating-block" style="background-color: <?php echo $block_1_rating_block_background_color ?>">
     <div class="row">
         <?php
+            $block_colour = $block_1_rating_block_color1;
             $rating = $block_1_rating_block_rating1;
             $review = $block_1_rating_block_review1;
             $review_type = $block_1_rating_block_review_type1;
-            $block_colour = $block_1_rating_block_color1;
             include 'template-blocks/single-rating.php';
 
+            $block_colour = $block_1_rating_block_color2;
             $rating = $block_1_rating_block_rating2;
             $review = $block_1_rating_block_review2;
             $review_type = $block_1_rating_block_review_type2;
-            $block_colour = $block_1_rating_block_color2;
             include 'template-blocks/single-rating.php';
 
+            $block_colour = $block_1_rating_block_color3;
             $rating = $block_1_rating_block_rating3;
             $review = $block_1_rating_block_review3;
             $review_type = $block_1_rating_block_review_type3;
-            $block_colour = $block_1_rating_block_color3;
             include 'template-blocks/single-rating.php';
         ?>
     </div>

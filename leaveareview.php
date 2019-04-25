@@ -6,37 +6,37 @@ $page_ID = 14;
 
 if (isset($_POST)) {
 
-echo 'FORM HAS BEEN POSTED';
-$errors = 'no';
-$review = $_POST['review'];
-$review_type = $_POST['review_type'];
-$rating = $_POST['rating'];
+    echo 'FORM HAS BEEN POSTED';
+    $errors = 'no';
+    $review = $_POST['review'];
+    $review_type = $_POST['review_type'];
+    $rating = $_POST['rating'];
 
-// add them all
+    // add them all
 
-if (empty($review)) {
-    $errors = 'yes';
-    echo "user email is empty";
-}
+    if (empty($review)) {
+        $errors = 'yes';
+        echo "user email is empty";
+    }
 
-if (empty($rating)) {
-    $errors = 'yes';
-    echo $_POST['Your name is empty'];
-}
-if ($errors == 'no') {
-    // add new entry to database
-    $form_data = "'" . date('d-m-Y') . "','" . $_POST['form_name'] . "'";
-    $entry_ID = EasyTrade_Database::insert_into_table('entry', 'ENTRY_DATE, FORM_NAME', $form_data);
+    if (empty($rating)) {
+        $errors = 'yes';
+        echo 'Your name is empty';
+    }
+    if ($errors == 'no') {
+        // add new entry to database
+        $form_data = "'" . date('d-m-Y') . "','" . $_POST['form_name'] . "'";
+        $entry_ID = EasyTrade_Database::insert_into_table('entry', 'ENTRY_DATE, FORM_NAME', $form_data);
 
-    // add information to entrymeta
-    $form_data = "'" . $entry_ID . "','review','" . $review . "'";
-    EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+        // add information to entrymeta
+        $form_data = "'" . $entry_ID . "','review','" . $review . "'";
+        EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
 
-    $form_data = "'" . $entry_ID . "','review_type','" . $review_type . "'";
-    EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+        $form_data = "'" . $entry_ID . "','review_type','" . $review_type . "'";
+        EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
 
-    $form_data = "'" . $entry_ID . "','rating','" . $rating . "'";
-    EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
+        $form_data = "'" . $entry_ID . "','rating','" . $rating . "'";
+        EasyTrade_Database::insert_into_table('entry_meta', 'ENTRYID, METAKEY, METAVALUE', $form_data);
 
     }
 }
@@ -79,6 +79,7 @@ include 'template-blocks/page-header.php'; ?>
             <fieldset>
                 <label for="review_type">Tell us who you are:</label>
                 <select id="review_type" name="review_type" value="<?php echo $review_type ?>">
+                    <option value="" disabled>Choose option</option>
                     <option value="customer">Customer</option>
                     <option value="tradesman">Tradesman</option>
                     <option value="other">Other</option>

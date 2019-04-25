@@ -99,7 +99,11 @@ include 'template-blocks/page-header.php';
 </div>
 <!--- END OF RATING BLOCK --->
 
+<!--- BUTTON  --->
 
+<div class="center" style="margin-bottom: 50px;">
+    <a href="<?php echo EasyTrade_Home_URL . 'leaveareview.php' ?>"><button class="btn et-btn-med">WRITE A REVIEW</button></a>
+</div>
 
 
 <?php 

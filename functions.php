@@ -1,6 +1,10 @@
 <?php
+/* Core PHP file of the whole CMS */ 
 
-define('EasyTrade_Path', __DIR__);
+define('EasyTrade_File_Path', __DIR__);
+$full_URL = explode('/', $_SERVER['REQUEST_URI']);
+define('EasyTrade_Home_URL', "http://" . $_SERVER['SERVER_NAME'] . "/" . $full_URL[1] . "/");
+define('EasyTrade_Admin_URL', EasyTrade_Home_URL . 'admin-pages/');
 
 class EasyTradeCore
 {
@@ -14,10 +18,10 @@ class EasyTradeCore
     private function include_files()
 	{
         /* Connect to Database */
-        include EasyTrade_Path . '/functions/database-functions.php';
+        include EasyTrade_File_Path . '/functions/database-functions.php';
 
         /* Create Tables */
-        include EasyTrade_Path . '/functions/create-tables.php';
+        include EasyTrade_File_Path . '/functions/create-tables.php';
 
     }
 

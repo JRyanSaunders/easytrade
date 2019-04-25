@@ -1,7 +1,10 @@
 form {
-    width: 75%;
+    width: 100%;
     position: relative;
     padding-left: 1em;
+    @include breakpoint (desktop) {
+        width: 75%;
+    }
     div {
         border: 1px solid #ddd;
         padding: 20px 30px;
@@ -20,6 +23,13 @@ form {
                 text-transform: uppercase;
                 width: 40%;
             }
+        }
+        &.radio-button-list {
+            box-shadow: none;
+            border: none;
+            padding: 0;
+            margin-left: 41%;
+            margin-top: -25px;
         }
     }
     input[type=submit] {

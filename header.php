@@ -17,9 +17,17 @@ if (isset($_SESSION['loggedin'])) {
     $user_ID = $_SESSION['user_ID'];
   }
 }
+if ($template_name == 'blog-post') {
+  include '../functions.php';
+}
+else {
+  include 'functions.php';
+}
+
+$active = 'class="active"';
 ?>
 
-<html lang="en" loggedin="<?php echo $loggedin ?>" userrole="<?php echo $user_role ?>">
+<html lang="en" loggedin="<?php echo $loggedin ?>" userrole="<?php echo $user_role ?>" userID="<?php echo $user_ID ?>">
 <head>
     <meta charset="utf-8">
     <title>PHP Example</title>
@@ -35,27 +43,11 @@ if (isset($_SESSION['loggedin'])) {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <?php 
-    if ($template_name == 'blog-post') { ?>
-      <link rel="stylesheet" type="text/css" href="../style.css">
-    <?php }
-    else { ?>
-      <link rel="stylesheet" type="text/css" href="style.css">
-    <?php } ?>
-
-
+    <link rel="stylesheet" type="text/css" href="<?php echo EasyTrade_Home_URL . 'style.css' ?>">
 </head>
-<?php 
-if ($template_name == 'blog-post') {
-  include '../functions.php';
-  $up_a_level = '../';
-}
-else {
-  include 'functions.php';
-  $up_a_level = false;
-}
-?>
+
 <header>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -63,13 +55,13 @@ else {
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span>
             </button>
-          <a class="navbar-brand" href="./home.php">EasyTrader</a>
+          <a class="navbar-brand" href="<?php echo EasyTrade_Home_URL . 'home.php' ?>">EasyTrader</a>
         </div>
 
         <div class="collapse navbar-collapse" id="myNavbar">
-            <form class="navbar-form navbar-left" action="<?php echo $up_a_level ?>search.php">
+            <form class="navbar-form navbar-left" action="<?php echo EasyTrade_Home_URL . 'search.php' ?>">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search" name="search">
                 <div class="input-group-btn">
@@ -79,26 +71,36 @@ else {
                 </div>
               </div>
             </form>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="<?php echo $up_a_level ?>home.php"><h3>Home</h3></a></li>
-              <li><a href="<?php echo $up_a_level ?>about.php"><h3>About</h3></a></li>
-              <li><a href="<?php echo $up_a_level ?>professional_advice.php"><h3>Professional Advice</h3></a></li>
-              <li><a href="<?php echo $up_a_level ?>reviews.php"><h3>Reviews</h3></a></li>
-              <li><a href="<?php echo $up_a_level ?>contact.php"><h3>Contact</h3></a></li>
+            <button type="button" class="navbar-toggle tablet-only" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class="nav navbar-nav mainmenu">
+              <li <?php if (strpos($_SERVER['REQUEST_URI'], 'home.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'home.php' ?>"><h3>Home</h3></a></li>
+              <li <?php if (strpos($_SERVER['REQUEST_URI'], 'about.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'about.php' ?>"><h3>About</h3></a></li>
+              <li <?php if (strpos($_SERVER['REQUEST_URI'], 'professional_advice.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'professional_advice.php' ?>"><h3>Professional Advice</h3></a></li>
+              <li <?php if (strpos($_SERVER['REQUEST_URI'], 'reviews.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'reviews.php' ?>"><h3>Reviews</h3></a></li>
+              <li <?php if (strpos($_SERVER['REQUEST_URI'], 'contact.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'contact.php' ?>"><h3>Contact</h3></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <?php if ($loggedin == false) { ?>
-                <li><a href="<?php echo $up_a_level ?>login.php" class="btn signin"><h3>Log in</h3></a></li>
-                <li><a href="<?php echo $up_a_level ?>signup.php"><h3>Register</h3></a></li> 
-              <?php } 
+                <li <?php if (strpos($_SERVER['REQUEST_URI'], 'login.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'login.php' ?>" class="btn signin"><h3>Log in</h3></a></li>
+                <li <?php if (strpos($_SERVER['REQUEST_URI'], 'signup.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'signup.php' ?>"><h3>Register</h3></a></li>
+              <?php }
               else { ?>
-                <li><form method="post"><input type="hidden" name="logout_trigger" value="logout" ><input type="submit" value="Logout"></form></li> 
-                <img class="img-responsive settings" src="/easytrade/assets/img/Settings-icon.png" alt="settings">
-              <?php } ?>    
+                <li><form method="post" class="logout_form"><input type="hidden" name="logout_trigger" value="logout" ><input type="submit" value="Logout"></form></li> 
+                <?php if ($user_type == 'admin') { ?>
+                  <li><a href="<?php echo EasyTrade_Home_URL . 'admin-pages/admin-dashboard.php' ?>" class="icon"><img class="img-responsive" src="/easytrade/assets/img/Settings-icon.png" alt="settings"></a></li>
+                <?php }
+                else { ?>
+                  <li><a href="<?php echo EasyTrade_Home_URL . 'admin-pages/tradesman-dashboard.php' ?>" class="icon"><img class="img-responsive" src="/easytrade/assets/img/Settings-icon.png" alt="settings"></a></li>
+              <?php }
+              } ?>
             </ul>
         </div>
-    </div> 
+    </div>
 </nav>
-    
+
 </header>
 <body class="<?php echo $template_name ?>">

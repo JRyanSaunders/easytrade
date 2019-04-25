@@ -73,6 +73,8 @@ class EasyTrade_Database
             echo "Error: " . $sql . "<br>" . $conn->error;
         }     
 
+        $conn->close();
+
     }
 
     public function update_database_record($tablename, $new_data, $identifier) {

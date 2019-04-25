@@ -10,8 +10,40 @@ class EasyTrade_Create_Tables
         $this->create_page_meta_table();
         $this->create_entry_table();
         $this->create_entry_meta_table();
-        $this->create_pages_blocks_table();
         $this->create_core_site_info_table();
+        $this->create_tradesman_page_table();
+        $this->create_tradesman_page_meta_table();
+    }
+
+    public function create_tradesman_page_table() {
+
+        $table_name = 'tradesman_page';
+
+        $table_fields = '
+            ID int(11) AUTO_INCREMENT,
+            COMPANY_NAME varchar(255) NOT NULL,
+            USERID int(11) NOT NULL,
+            PAGE_CREATION_DATE varchar(255) NOT NULL,
+            STATUS varchar(255) NOT NULL,
+            URL_NAME varchar(255) NOT NULL,
+            PRIMARY KEY  (ID)';
+
+        $new_table = EasyTrade_Database::create_database_table($table_name, $table_fields);
+
+    }
+
+    public function create_tradesman_page_meta_table() {
+
+        $table_name = 'tradesman_page_meta';
+
+        $table_fields = '
+            ID int(11) AUTO_INCREMENT,
+            PAGEID varchar(255) NOT NULL,
+            METAKEY varchar(255) NOT NULL,
+            METAVALUE varchar(255) NOT NULL,
+            PRIMARY KEY  (ID)';
+
+        $new_table = EasyTrade_Database::create_database_table($table_name, $table_fields);
 
     }
 
@@ -89,6 +121,7 @@ class EasyTrade_Create_Tables
             ID int(11) AUTO_INCREMENT,
             ENTRY_DATE DATE NOT NULL,
             FORM_NAME varchar(255) NOT NULL,
+            TRADESMAN_ID int(11),
             PRIMARY KEY  (ID)';
 
         $new_table = EasyTrade_Database::create_database_table($table_name, $table_fields);
@@ -110,21 +143,6 @@ class EasyTrade_Create_Tables
 
     }
 
-    public function create_pages_blocks_table() {
-
-        $table_name = 'pages_blocks';
-
-        $table_fields = '
-            ID int(11) AUTO_INCREMENT,
-            PAGEID varchar(255) NOT NULL,
-            BLOCK_FIELD_NAME varchar(255) NOT NULL,
-            DATA_TYPE varchar(255) NOT NULL,
-            PRIMARY KEY  (ID)';
-
-        $new_table = EasyTrade_Database::create_database_table($table_name, $table_fields);
-
-    }
-
     public function create_core_site_info_table() {
 
         $table_name = 'core_site_info';
@@ -138,8 +156,6 @@ class EasyTrade_Create_Tables
         $new_table = EasyTrade_Database::create_database_table($table_name, $table_fields);
 
     }
-
-
 
 }
 

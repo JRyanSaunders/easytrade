@@ -93,7 +93,7 @@ include 'template-blocks/page-header.php'; ?>
                 <option value="" disabled>Choose option</option>
                 <option value="customer">General enquiry</option>
                 <option value="tradesman">Joining the website</option>
-                <option value="other">Complaint</option>
+                <option value="complaint">Complaint</option>
                 <option value="other">Other</option>
             </select>
         </fieldset>
@@ -110,7 +110,7 @@ include 'template-blocks/page-header.php'; ?>
 
         <fieldset>
             <label for="user_comment">Comment:</label>
-            <textarea id="user_comment" name="user_comment" class="form-control mb-3" value="<?php echo $user_comment ?>"></textarea>
+            <textarea id="user_comment" name="user_comment" class="form-control mb-3" value="<?php echo $user_comment ?>" data-gramm_editor="false"></textarea>
         </fieldset>
         </div>
 

@@ -83,33 +83,32 @@ if ($_POST) {
 }
 ?>
 
-<form method="post">
+<div class="login-form">
+    <div class="fields">
+        <p>Enter your login details below!</p>
+        <form method="post">
+        
+            <fieldset>
+                <label for="username">Username:</label>
+                    <input type="text" id="username" name="user_name">
+            </fieldset>
 
-    <!-- When using 'form method="post"':
-    ** ID is used for the label
-    ** name is used for getting the values to print
-        -->
-    <fieldset>
-        <label for="username">Username:</label>
-            <input type="text" id="username" name="user_name">
-    </fieldset>
+            <fieldset>
+                <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+            </fieldset>
 
-    <fieldset>
-        <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-    </fieldset>
+            <fieldset>
+                <label for="conf_password">Confirm Password:</label>
+                    <input type="password" id="conf_password" name="conf_password">
+            </fieldset>
 
-    <fieldset>
-        <label for="conf_password">Confirm Password:</label>
-            <input type="password" id="conf_password" name="conf_password">
-    </fieldset>
-
-    <fieldset>
-        <input type="submit" value="login">
-    </fieldset>
-
-</form>
-
+            <fieldset>
+                <input type="submit" class="btn et-btn-white" value="login">
+            </fieldset>
+        </form>
+    </div>
+</div>
 
 
 
