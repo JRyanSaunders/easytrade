@@ -26,7 +26,12 @@ if ($all_page_data->num_rows > 0) {
 <div class="parallax" style="background-image: <?php echo "url('/easytrade/assets/img/" . $parallax . "');"?>">
     <h1><?php echo $page_title ?></h1>
     <h2><?php echo $page_subtitle ?></h2>
-    <input type="text" placeholder="Search" class="homesearch">
+    <form method="post" class="homesearch" action="<?php echo EasyTrade_Home_URL . 'search.php' ?>">
+        <input type="text" placeholder="Search" name="search_string">
+        <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+        </button>
+    </form>
 </div>
 
 <div class="row full-width-block polaroid" style="background-color: <?php echo $block_1_polaroid_background_color ?>">

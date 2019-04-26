@@ -20,7 +20,7 @@
     <div class="col-sm-6">
         <h2><?php echo $title ?></h2>
         <p><?php echo $content ?></p>
-        <button class="btn <?php echo $button_colour ?>"><?php echo $button_title ?></button>
+        <button class="btn <?php echo $button_color ?>"><?php echo $button_title ?></button>
     </div>
     <?php if ($image_position == 'right') { ?>
         <div class="col-sm-6">

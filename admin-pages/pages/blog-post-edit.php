@@ -59,7 +59,8 @@ if ($get_page_meta->num_rows>0) {
         $message_block_alt_text = (isset($block_1_message_block_alt_text) == 1) ? $block_1_message_block_alt_text : '';
         $message_block_lead_title = (isset($block_1_message_block_lead_title) == 1) ? $block_1_message_block_lead_title : '';
         $message_block_content = (isset($block_1_message_block_content) == 1) ? $block_1_message_block_content : '';
-        $message_block_button_colour = (isset($block_1_message_block_button_colour) == 1) ? $block_1_message_block_button_colour : '';
+        $message_block_button_label = (isset($block_1_message_block_button_label) == 1) ? $block_1_message_block_button_label : '';
+        $message_block_button_color = (isset($block_1_message_block_button_color) == 1) ? $block_1_message_block_button_color : '';
         $message_block_link = (isset($block_1_message_block_link) == 1) ? $block_1_message_block_link : '';
         include '../../blocks/image_message_block.php';
 

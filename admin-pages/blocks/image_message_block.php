@@ -43,24 +43,24 @@
 
     <fieldset>
         <?php
-        $selected_lightbluebk = ($message_block_button_colour == 'et-btn-lightbk') ? 'checked' : false;
-        $selected_medbluebk = ($message_block_button_colour == 'et-btn-medbk') ? 'checked' : false;
-        $selected_darkbluebk = ($message_block_button_colour == 'et-btn-darkbk') ? 'checked' : false;
-        $selected_whitebk = ($message_block_button_colour == 'et-btn-whitebk') ? 'checked' : false;
-        $selected_lightbluetxt = ($message_block_button_colour == 'et-btn-light') ? 'checked' : false;
-        $selected_medbluetxt = ($message_block_button_colour == 'et-btn-med') ? 'checked' : false;
-        $selected_darkbluetxt = ($message_block_button_colour == 'et-btn-dark') ? 'checked' : false;
-        $selected_whitetxt = ($message_block_button_colour == 'et-btn-white') ? 'checked' : false; ?>
-        <label for="button_colour">Button Colour</label>
+        $selected_lightbluebk = ($message_block_button_color == 'et-btn-lightbk') ? 'checked' : false;
+        $selected_medbluebk = ($message_block_button_color == 'et-btn-medbk') ? 'checked' : false;
+        $selected_darkbluebk = ($message_block_button_color == 'et-btn-darkbk') ? 'checked' : false;
+        $selected_whitebk = ($message_block_button_color == 'et-btn-whitebk') ? 'checked' : false;
+        $selected_lightbluetxt = ($message_block_button_color == 'et-btn-light') ? 'checked' : false;
+        $selected_medbluetxt = ($message_block_button_color == 'et-btn-med') ? 'checked' : false;
+        $selected_darkbluetxt = ($message_block_button_color == 'et-btn-dark') ? 'checked' : false;
+        $selected_whitetxt = ($message_block_button_color == 'et-btn-white') ? 'checked' : false; ?>
+        <label for="button_color">Button Colour</label>
         <div class="radio-button-list">
-            <input type="radio" <?php echo $selected_lightbluebk ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="et-btn-lightbk"> Light Blue Background<br>
-            <input type="radio" <?php echo $selected_medbluebk ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="et-btn-medbk"> Medium Blue Background<br>
-            <input type="radio" <?php echo $selected_darkbluebk ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="et-btn-darkbk"> Dark Blue Background<br>
-            <input type="radio" <?php echo $selected_whitebk ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="et-btn-whitebk"> White Background<br>
-            <input type="radio" <?php echo $selected_lightbluetxt ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="et-btn-light"> White Background, Light Blue Text<br>
-            <input type="radio" <?php echo $selected_medbluetxt ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="et-btn-med"> White Background, Medium Blue Text<br>
-            <input type="radio" <?php echo $selected_darkbluetxt ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="et-btn-dark"> White Background, Dark Blue Text<br>
-            <input type="radio" <?php echo $selected_whitetxt ?> name="block_<?php echo $block_ID ?>_message_block_button_colour" value="et-btn-white">No Background, White Text<br>
+            <input type="radio" <?php echo $selected_lightbluebk ?> name="block_<?php echo $block_ID ?>_message_block_button_color" value="et-btn-lightbk"> Light Blue Background<br>
+            <input type="radio" <?php echo $selected_medbluebk ?> name="block_<?php echo $block_ID ?>_message_block_button_color" value="et-btn-medbk"> Medium Blue Background<br>
+            <input type="radio" <?php echo $selected_darkbluebk ?> name="block_<?php echo $block_ID ?>_message_block_button_color" value="et-btn-darkbk"> Dark Blue Background<br>
+            <input type="radio" <?php echo $selected_whitebk ?> name="block_<?php echo $block_ID ?>_message_block_button_color" value="et-btn-whitebk"> White Background<br>
+            <input type="radio" <?php echo $selected_lightbluetxt ?> name="block_<?php echo $block_ID ?>_message_block_button_color" value="et-btn-light"> White Background, Light Blue Text<br>
+            <input type="radio" <?php echo $selected_medbluetxt ?> name="block_<?php echo $block_ID ?>_message_block_button_color" value="et-btn-med"> White Background, Medium Blue Text<br>
+            <input type="radio" <?php echo $selected_darkbluetxt ?> name="block_<?php echo $block_ID ?>_message_block_button_color" value="et-btn-dark"> White Background, Dark Blue Text<br>
+            <input type="radio" <?php echo $selected_whitetxt ?> name="block_<?php echo $block_ID ?>_message_block_button_color" value="et-btn-white">No Background, White Text<br>
         </div>
     </fieldset>
 

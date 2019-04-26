@@ -35,7 +35,8 @@ include '../template-blocks/page-header.php';
     $image_alt_text = $block_1_message_block_alt_text;
     $title = $block_1_message_block_lead_title;
     $content = $block_1_message_block_content;
-    $button_title = $block_1_message_block_button_colour;
+    $button_title = $block_1_message_block_button_label;
+    $button_color = $block_1_message_block_button_color;
     include '../template-blocks/image-message-block.php';
 ?>
 <!--- END OF IMAGE MESSAGE BLOCK --->

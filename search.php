@@ -25,8 +25,54 @@ $blog = ($template_name == 'blog-post') ? 'blog' : false;
 include 'template-blocks/page-header.php';
 ?>
 
-<p>Search Results Page</p>
-
 <?php 
+$search_string = $_POST['search_string'];
+
+//Search Companies (tradesman)
+$search_results = EasyTrade_Database::get_from_database("SELECT * FROM tradesman_page WHERE COMPANY_NAME LIKE '%" . $search_string . "%'");
+if ($search_results->num_rows > 0) {
+    while($row = $search_results->fetch_assoc()) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        $tradesman_page_ID = $row["ID"];
+        $company = $row["COMPANY_NAME"];
+        $url = $row["URL_NAME"];
+
+        $tradesman_info = EasyTrade_Database::get_from_database("SELECT * FROM tradesman_page_meta WHERE (PAGEID=" . $tradesman_page_ID . " AND METAKEY='company_about')");
+        if ($tradesman_info->num_rows > 0) {
+            while($row = $tradesman_info->fetch_assoc()) {
+                $tradesman_information = $row["METAVALUE"];
+            }
+        }
+        ?>
+        
+        <a href="<?php echo EasyTrade_Home_URL . 'tradesman/' . $url . '.php' ?>">
+            <div class="search-result">
+                <h3><?php echo $company ?></h3>
+                <p><?php echo $tradesman_information ?></p>
+            </div>
+        </a>
+        
+
+<?php
+    }
+}
+
 include 'footer.php';
 ?>

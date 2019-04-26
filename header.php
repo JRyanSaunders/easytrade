@@ -61,9 +61,9 @@ $active = 'class="active"';
         </div>
 
         <div class="collapse navbar-collapse" id="myNavbar">
-            <form class="navbar-form navbar-left" action="<?php echo EasyTrade_Home_URL . 'search.php' ?>">
+            <form method="post" class="navbar-form navbar-left" action="<?php echo EasyTrade_Home_URL . 'search.php' ?>">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search" name="search">
+                <input type="text" class="form-control" placeholder="Search" name="search_string">
                 <div class="input-group-btn">
                   <button class="btn btn-default" type="submit">
                     <i class="glyphicon glyphicon-search"></i>
