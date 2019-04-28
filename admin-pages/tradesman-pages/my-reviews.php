@@ -9,44 +9,46 @@ if ($get_page_ID->num_rows>0) {
     }
 }
 
-if ($_POST) {
-
-    //validate
-    //update database
-}
-
-// get current data and fill fields
-
 ?>
 
 <div class="admin-page">
 
-    <h1> Reviews </h1>
-    <hr>
-    <?php $form_type = 'tradesman__' . $user_ID . '__reviews'; ?>
-    <div class="row">
-        <div class="col-sm-2"><?php echo "ENTRY ID" ?></div>
-        <div class="col-sm-2"><?php echo "USER NAME" ?></div>
-        <div class="col-sm-2"><?php echo "USER TYPE" ?></div>
-        <div class="col-sm-2"><?php echo "USER ENQUIRY TYPE" ?></div>
-        <div class="col-sm-2"><?php echo "USER EMAIL" ?></div>
-    </div>
-    
-    <form method="post">
+<h1> Reviews </h1>
+<hr>
+<?php $form_type = 'review__' . $page_ID; ?>
+<div class="row">
+    <div class="col-sm-2"><?php echo "ENTRY ID" ?></div>
+    <div class="col-sm-2"><?php echo "BLOCK COLOUR" ?></div>
+    <div class="col-sm-2"><?php echo "RATING" ?></div>
+    <div class="col-sm-2"><?php echo "REVIEW" ?></div>
+    <div class="col-sm-2"><?php echo "REVIEW NAME" ?></div>
+</div>
 
+<?php
+$entries = EasyTrade_Database::get_from_database("SELECT * FROM entry WHERE FORM_NAME='" . $form_type . "'");
+if ($entries->num_rows > 0) {
+    while($column = $entries->fetch_assoc()) {
+        $entry_ID = $column["ID"];
+        $entry_meta = EasyTrade_Database::get_from_database("SELECT * FROM entry_meta WHERE ENTRYID='" . $entry_ID . "'");
+        if ($entry_meta->num_rows > 0) {
+            
+            while($row = $entry_meta->fetch_assoc()) {
+                $variable_name = $row["METAKEY"];
+                $$variable_name = $row["METAVALUE"];
+            }
+        }
+        ?>
 
-        <!-- company name etc -->
-
-
-
-
-
-
-
-
-        <input type="submit" value="save">
-
-    </form>
+        <div class="row">
+            <div class="col-sm-2"><?php echo $entry_ID ?></div>
+            <div class="col-sm-2"><?php echo $block_colour ?></div>
+            <div class="col-sm-2"><?php echo $rating ?></div>
+            <div class="col-sm-2"><?php echo $review ?></div>
+            <div class="col-sm-2"><?php echo $review_name ?></div>
+        </div>
+        <hr>
+    <?php } 
+} ?> 
 </div>
 
 

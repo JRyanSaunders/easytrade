@@ -124,6 +124,9 @@
                     @include breakpoint(tablet) {
                         position: absolute;
                         top: 50px;
+                        right: 30px;
+                    }
+                    @include breakpoint(desktop) {
                         right: -45px;
                     }
                 }

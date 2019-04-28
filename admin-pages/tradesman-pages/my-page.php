@@ -95,6 +95,13 @@ if (isset($_POST)) {
         }
 
     }
+    else if ($_POST['form_name'] == 'remove-team-member') {
+        
+        $team_member_ID = $_POST['team_member_ID'];
+        $identifier = "ID=" . $team_member_ID;
+        EasyTrade_Database::delete_database_record('tradesman_page_meta', $identifier);
+
+    }
     else if ($_POST['form_name'] == 'previous-work') {
 
         $block_border_color_1 = $_POST['block_border_color_1'];
@@ -108,6 +115,13 @@ if (isset($_POST)) {
             $data = "'" . $page_ID . "','previous_work', '" . $value . "'";
             EasyTrade_Database::insert_into_table('tradesman_page_meta', 'PAGEID, METAKEY, METAVALUE', $data);
         }
+
+    }
+    else if ($_POST['form_name'] == 'remove-previous-work') {
+        
+        $previous_work_ID = $_POST['previous_work_ID'];
+        $identifier = "ID=" . $previous_work_ID;
+        EasyTrade_Database::delete_database_record('tradesman_page_meta', $identifier);
 
     }
 }
@@ -192,17 +206,22 @@ if (isset($_POST)) {
             $get_team_members = EasyTrade_Database::get_from_database("SELECT * FROM `tradesman_page_meta` WHERE `PAGEID`=$page_ID AND `METAKEY`='team_member'");
             if ($get_team_members->num_rows>0) {
                 while($row = $get_team_members->fetch_assoc()) {
+                    $team_member_ID = $row["ID"];
                     $team_member = $row["METAVALUE"];
                     $split_team_member_details = explode('__', $team_member);
                     
                     $name = $split_team_member_details[0];
                     $image = $split_team_member_details[1];
                     
-                    echo "<div class='team-member'>";
-                        echo "Name: " . $name . "<br>";
-                        echo "Image: " . $image . "<br>";
-                        echo "<button>Delete Team Member</button>";
-                    echo "</div>";
+                    echo "<form method='post'>";
+                    echo "<input type='hidden' name='form_name' value='remove-team-member'>";
+                    echo "<input type='hidden' name='team_member_ID' value='$team_member_ID'>";
+                        echo "<div class='team-member'>";
+                            echo "Name: " . $name . "<br>";
+                            echo "Image: " . $image . "<br>";
+                            echo "<button type='submit'>Delete Team Member</button>";
+                        echo "</div>";
+                    echo "</form>";
 
                 }
             } ?>
@@ -213,7 +232,6 @@ if (isset($_POST)) {
                     <h2> Your Team </h2>
 
                     
-
                     <fieldset>
                         <?php $team_member_name = (isset($team_member_name) == 1) ? $team_member_name : ''; ?>
                         <label for="team_member_name">Team Member Name:</label>
@@ -239,6 +257,7 @@ if (isset($_POST)) {
             $get_previous_work = EasyTrade_Database::get_from_database("SELECT * FROM `tradesman_page_meta` WHERE `PAGEID`=$page_ID AND `METAKEY`='previous_work'");
             if ($get_previous_work->num_rows>0) {
                 while($row = $get_previous_work->fetch_assoc()) {
+                    $previous_work_ID = $row["ID"];
                     $previous_work = $row["METAVALUE"];
                     $split_previous_work_details = explode('__', $previous_work);
 
@@ -247,13 +266,18 @@ if (isset($_POST)) {
                     $title = $split_previous_work_details[2];
                     $desc = $split_previous_work_details[3];
 
-                    echo "<div class='previous-work'>";
-                        echo "Block Border Colour: " . $block_border_color . "<br>";
-                        echo "Image: " . $image . "<br>";
-                        echo "Title: " . $title . "<br>";
-                        echo "Description: " . $desc . "<br>";
-                        echo "<button>Delete Previous Work</button>";
-                    echo "</div>";
+            
+                    echo "<form method='post'>";
+                    echo "<input type='hidden' name='form_name' value='remove-previous-work'>";
+                    echo "<input type='hidden' name='previous_work_ID' value='$previous_work_ID'>";
+                        echo "<div class='previous-work'>";
+                            echo "Block Border Colour: " . $block_border_color . "<br>";
+                            echo "Image: " . $image . "<br>";
+                            echo "Title: " . $title . "<br>";
+                            echo "Description: " . $desc . "<br>";
+                            echo "<button type='submit'>Delete  Previous Work</button>";
+                        echo "</div>";
+                    echo "</form>";
 
                 }
             } ?>

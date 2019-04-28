@@ -26,6 +26,7 @@
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">
             <p class="copyright-text"> EasyTrade made by Jack Saunders </p>
+            <p style="font-size: 10px; color: #FFF; margin-top: 10px;">Please note that a large proportion of the content on this site has been collected from various webpages and I do not claim the rights to any images, blog posts or tradesman information</p>
           </div>
         </div>
       </div>

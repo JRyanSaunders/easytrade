@@ -5,7 +5,7 @@
      *
      */
 
-    $text_column_block_background_colour = $_POST['block_' . $block_ID .'_background_color'];
+    $text_column_block_background_colour = $_POST['block_' . $block_ID .'_text_column_block_background_color'];
     if (!empty($text_column_block_background_colour)) {
         $column_to_update = 'METAVALUE="' . $text_column_block_background_colour . '"';
         $row_to_update = $page_finder . '"block_' . $block_ID . '_text_column_block_background_color")';

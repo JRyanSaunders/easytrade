@@ -11,9 +11,10 @@
                 fn.setPolaroidCSS();
                 fn.setQuoteBlockCSS();
                 fn.setRatingBlockCSS();
+                fn.setSearchResultsCSS();
             },
             
-            addListener: function ()
+            addListeners: function ()
             {
                 jQuery('.navbar-toggle.tablet-only').on('click', fn.toggleMainMenu)
             },
@@ -73,9 +74,48 @@
                     {
                         largestHeight = jQuery(elem).height();
                     }
-				});
+                });
+
+                if (largestHeight == 0) {
+                    var secondLargestHeight = 0;
+                    var otherRatingBlocks = jQuery('.slimline-container .rating');
+                    jQuery(otherRatingBlocks).each(function(i, elem) {
+                        if (jQuery(elem).height() > secondLargestHeight)
+                        {
+                            secondLargestHeight = jQuery(elem).height();
+                        }
+                    });
+                }
 
                 jQuery(ratingBoxes).css("height", (largestHeight + 30));
+
+                jQuery(otherRatingBlocks).css("height", (secondLargestHeight + 30));
+
+            },
+
+            setSearchResultsCSS: function()
+			{
+                var largestHeight = 0;
+                var searchResultHeaders = jQuery('.search-result .header');
+				jQuery(searchResultHeaders).each(function(i, elem) {
+                    if (jQuery(elem).height() > largestHeight)
+                    {
+                        largestHeight = jQuery(elem).height();
+                    }
+				});
+
+                jQuery(searchResultHeaders).css("height", (largestHeight + 30));
+
+				var largestHeight = 0;
+                var searchResults = jQuery('.search-result');
+				jQuery(searchResults).each(function(i, elem) {
+                    if (jQuery(elem).height() > largestHeight)
+                    {
+                        largestHeight = jQuery(elem).height();
+                    }
+				});
+
+                jQuery(searchResults).css("height", largestHeight);
             },
 
 		}

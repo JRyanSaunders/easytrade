@@ -16,10 +16,13 @@ if ($_POST) {
     include '../../block-validation/page_header_submit.php';
 
     $block_ID = 1;
-    include '../../block-validation/text_column_block_validation.php';
+    include '../../block-validation/text_block_validation.php';
 
     $block_ID = 1;
     include '../../block-validation/image_message_block_submit.php';
+
+    $block_ID = 1;
+    include '../../block-validation/text_column_block_validation.php';
 
     $block_ID = 1;
     include '../../block-validation/polaroid_block_submit.php';
@@ -64,7 +67,7 @@ if ($get_page_meta->num_rows>0) {
         $message_block_link = (isset($block_1_message_block_link) == 1) ? $block_1_message_block_link : '';
         include '../../blocks/image_message_block.php';
 
-        $background_color = (isset($block_1_background_color) == 1) ? $block_1_background_color : '';
+        $column_background_color = (isset($block_1_text_column_block_background_color) == 1) ? $block_1_text_column_block_background_color : '';
         $text_column_block_column_1_lead_title = (isset($block_1_text_column_block_column_1_lead_title) == 1) ? $block_1_text_column_block_column_1_lead_title : '';
         $text_column_block_column_1_text = (isset($block_1_text_column_block_column_1_text) == 1) ? $block_1_text_column_block_column_1_text : '';
         $text_column_block_column_2_lead_title = (isset($block_1_text_column_block_column_2_lead_title) == 1) ? $block_1_text_column_block_column_2_lead_title : '';

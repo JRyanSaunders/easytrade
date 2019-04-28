@@ -92,6 +92,21 @@ class EasyTrade_Database
 
     }
 
+    public function delete_database_record($tablename, $identifier) {
+
+        $conn = EasyTrade_Database::connect_to_database();
+
+        $sql = "DELETE FROM " . $tablename . " WHERE " . $identifier ;
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Record deleted successfully";
+        } else {
+            echo "Error deleting record: " . $conn->error;
+        }
+        $conn->close();
+
+    }
+
 }
 
 new EasyTrade_Database();
