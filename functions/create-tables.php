@@ -38,10 +38,11 @@ class EasyTrade_Create_Tables
 
         $table_fields = '
             ID int(11) AUTO_INCREMENT,
-            PAGEID varchar(255) NOT NULL,
+            PAGEID int(11) NOT NULL,
             METAKEY varchar(255) NOT NULL,
             METAVALUE varchar(255) NOT NULL,
-            PRIMARY KEY  (ID)';
+            PRIMARY KEY  (ID),
+            FOREIGN KEY (PAGEID) REFERENCES tradesman_page(ID)';
 
         $new_table = EasyTrade_Database::create_database_table($table_name, $table_fields);
 
