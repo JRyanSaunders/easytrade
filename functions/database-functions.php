@@ -11,7 +11,7 @@ class EasyTrade_Database
         $this->connect_to_database();
 	}
 
-    public function connect_to_database() {
+    public static function connect_to_database() {
         // Create connection
         $conn = new mysqli(self::$host, self::$username, self::$password, self::$database);
 
@@ -23,7 +23,7 @@ class EasyTrade_Database
         return $conn;
     }
 
-    public function create_database_table($tablename, $fields) {
+    public static function create_database_table($tablename, $fields) {
 
         $conn = EasyTrade_Database::connect_to_database();
 
@@ -46,7 +46,7 @@ class EasyTrade_Database
 
     }
 
-    public function insert_into_table($tablename, $columns, $data) {
+    public static function insert_into_table($tablename, $columns, $data) {
 
         $conn = EasyTrade_Database::connect_to_database();
 
@@ -63,7 +63,7 @@ class EasyTrade_Database
 
     }
 
-    public function get_from_database($sql) {
+    public static function get_from_database($sql) {
 
         $conn = EasyTrade_Database::connect_to_database();
 
@@ -77,7 +77,7 @@ class EasyTrade_Database
 
     }
 
-    public function update_database_record($tablename, $new_data, $identifier) {
+    public static function update_database_record($tablename, $new_data, $identifier) {
 
         $conn = EasyTrade_Database::connect_to_database();
 
@@ -92,7 +92,7 @@ class EasyTrade_Database
 
     }
 
-    public function delete_database_record($tablename, $identifier) {
+    public static function delete_database_record($tablename, $identifier) {
 
         $conn = EasyTrade_Database::connect_to_database();
 

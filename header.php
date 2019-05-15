@@ -57,7 +57,7 @@ $active = 'class="active"';
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-          <a class="navbar-brand" href="<?php echo EasyTrade_Home_URL . 'home.php' ?>">EasyTrader</a>
+          <a class="navbar-brand" href="<?php echo EasyTrade_Home_URL . 'index.php' ?>">EasyTrader</a>
         </div>
 
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -77,7 +77,7 @@ $active = 'class="active"';
                 <span class="icon-bar"></span>
             </button>
             <ul class="nav navbar-nav mainmenu">
-              <li <?php if (strpos($_SERVER['REQUEST_URI'], 'home.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'home.php' ?>"><h3>Home</h3></a></li>
+              <li <?php if (strpos($_SERVER['REQUEST_URI'], 'index.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'index.php' ?>"><h3>Home</h3></a></li>
               <li <?php if (strpos($_SERVER['REQUEST_URI'], 'about.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'about.php' ?>"><h3>About</h3></a></li>
               <li <?php if (strpos($_SERVER['REQUEST_URI'], 'professional_advice.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'professional_advice.php' ?>"><h3>Professional Advice</h3></a></li>
               <li <?php if (strpos($_SERVER['REQUEST_URI'], 'reviews.php') !== false) { echo $active; } ?>><a href="<?php echo EasyTrade_Home_URL . 'reviews.php' ?>"><h3>Reviews</h3></a></li>

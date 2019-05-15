@@ -63,7 +63,7 @@ else {
 <header class="admin-header">
 
   <div class="admin-navbar">
-    <a href="<?php echo EasyTrade_Home_URL . 'home.php' ?>">HOME</a>
+    <a href="<?php echo EasyTrade_Home_URL . 'index.php' ?>">HOME</a>
     <a href="<?php echo EasyTrade_Home_URL . 'about.php' ?>">ABOUT</a>
     <a href="<?php echo EasyTrade_Home_URL . 'professional_advice.php' ?>">PROFESSIONAL ADVICE</a>
     <a href="<?php echo EasyTrade_Home_URL . 'reviews.php' ?>">REVIEWS</a>

@@ -73,7 +73,7 @@ if ($_POST) {
             $_SESSION['username'] = $username;
             $_SESSION['user_role'] = $user_role;
             $_SESSION['user_ID'] = $user_ID;
-            header("Refresh:0; url=home.php");
+            header("Refresh:0; url=index.php");
         }
         else {
             $errors = 'yes';

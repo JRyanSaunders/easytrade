@@ -8,7 +8,7 @@ else {
     $_SESSION['user_role'] = false;
     $_SESSION['user_ID'] = false;
 
-    header("Location: /home.php");
+    header("Location: /index.php");
     die;
 }  
 ?>
