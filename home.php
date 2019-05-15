@@ -28,7 +28,7 @@ if ($all_page_data->num_rows > 0) {
         <h1><?php echo $page_title ?></h1>
         <h2><?php echo $page_subtitle ?></h2>
         <form method="post" class="homesearch" action="<?php echo EasyTrade_Home_URL . 'search.php' ?>">
-            <input type="text" placeholder="Search" name="search_string">
+            <input type="text" placeholder="Search by name, location or type" name="search_string">
             <button class="btn btn-default" type="submit">
                 <i class="glyphicon glyphicon-search"></i>
             </button>

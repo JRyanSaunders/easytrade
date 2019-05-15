@@ -16,18 +16,18 @@ include 'admin-header.php';
     </form>
     
     <div class="row">
-        <div class="col-sm-6">
-            <a href="/tradesman-pages/my-details.php">
+        <div class="col-sm-4">
+            <a href="tradesman-pages/my-details.php">
                 <div class="quicklink">
-                    <img class="img-responsive" src="<?php echo EasyTrade_Home_URL . '/assets/img/logo.png' ?>"/>
+                    <img class="img-responsive" src="<?php echo EasyTrade_Home_URL . '/assets/img/InformationIcon.jpg' ?>"/>
                     <h3>My Details</h3>
                 </div>
             </a>
         </div>
-        <div class="col-sm-6">
-            <a href="/tradesman-pages/my-page.php">
+        <div class="col-sm-4">
+            <a href="tradesman-pages/my-page.php">
                 <div class="quicklink">
-                    <img class="img-responsive" src="<?php echo EasyTrade_Home_URL . '/assets/img/logo.png' ?>"/>
+                    <img class="img-responsive" src="<?php echo EasyTrade_Home_URL . '/assets/img/InformationIcon.jpg' ?>"/>
                     <h3>My Webpage</h3>
                 </div>
             </a>
@@ -35,18 +35,18 @@ include 'admin-header.php';
     </div>
 
     <div class="row">
-        <div class="col-sm-6">
-            <a href="/tradesman-pages/my-enquiries.php">
+        <div class="col-sm-4">
+            <a href="tradesman-pages/my-enquiries.php">
                 <div class="quicklink">
-                    <img class="img-responsive" src="<?php echo EasyTrade_Home_URL . '/assets/img/logo.png' ?>"/>
+                    <img class="img-responsive" src="<?php echo EasyTrade_Home_URL . '/assets/img/InformationIcon.jpg' ?>"/>
                     <h3>My Enquiries</h3>
                 </div>
             </a>
         </div>
-        <div class="col-sm-6">
-            <a href="/tradesman-pages/my-reviews.php">
+        <div class="col-sm-4">
+            <a href="tradesman-pages/my-reviews.php">
                 <div class="quicklink">
-                    <img class="img-responsive" src="<?php echo EasyTrade_Home_URL . '/assets/img/logo.png' ?>"/>
+                    <img class="img-responsive" src="<?php echo EasyTrade_Home_URL . '/assets/img/InformationIcon.jpg' ?>"/>
                     <h3>My Reviews</h3>
                 </div>
             </a>
