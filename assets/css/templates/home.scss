@@ -1,0 +1,103 @@
+.home {
+    .parallax {
+        background-image: url('/easytrade/assets/img/paint1.jpg');
+        height: 100vh;
+        .parallax-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 93%;
+            transform: translate(-50%, -50%);
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            @include breakpoint(tablet) {
+                width: 70%;
+            }
+            h1, h2 {
+                text-align: center;
+                color: #FFF;
+            }
+            h1 {
+                font-size: 32px;
+                margin-bottom: 10px;
+                @include breakpoint(tablet) {
+                    font-size: 38px;
+                }
+            }
+            h2 {
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 25px;
+                @include breakpoint(tablet) {
+                    font-size: 25px;
+                    line-height: 28px;
+                }
+            }
+            form {
+                width: calc(100vw - 45px);
+                position: relative;
+                padding: 0;
+                @include breakpoint(tablet) {
+                    padding: 0 15%;
+                    width: 100%;
+                }
+                input[type="text"] {
+                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+                    width: 100%;
+                    height: 50px;
+                    padding: 10px 20px;
+                    border: none;
+                    text-transform: lowercase;
+                    font-size: 16px;
+                }
+                button {
+                    position: absolute;
+                    right: -7%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    border: none;
+                    box-shadow: none;
+                    border-left: 1px solid #9a9a9a;
+                    padding: 14.5px 20px;
+                    @include breakpoint(tablet) {
+                        right: 13%;
+                    }
+                }
+            }
+
+
+
+
+        }
+        /*h1, h2 {
+            
+            font-weight: 500;
+            line-height: normal;
+            
+            
+            
+        }
+        h1  {
+            top: 32%;  /* position the top  edge of the element at the middle of the parent */
+            /*font-size: 30px;
+        }
+        h2  {
+            top: 37%;  /* position the top  edge of the element at the middle of the parent */
+            /*font-size: 20px;
+            width: 100%;
+        }*/
+    }
+    /*.homesearch {
+        padding: 6px;
+        position: absolute;
+        top: 50%;  /* position the top  edge of the element at the middle of the parent */
+        //left: 50%; /* position the left edge of the element at the middle of the parent */
+        /*transform: translate(-50%, -50%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-width: 0px;
+        width: 50%;
+        height: 8%;
+        font-size: 24px;
+        font-family: $default-font;
+    }*/
+}

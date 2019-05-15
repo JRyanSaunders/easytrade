@@ -1,0 +1,12 @@
+.text-block {
+    padding: 20px 10px;
+    @include breakpoint(tablet) {
+        padding: 60px;
+    }
+    h2 {
+        padding-bottom: 40px;
+    }
+    p {
+        line-height: 1.5em;
+    }
+}
